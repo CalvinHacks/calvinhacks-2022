@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import FooterSection from '../components/Footer';
 import SponsorSection from '../components/SponsorSection';
+import AboutSection from '../components/AboutSection';
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar toggle={toggle} />
             <HeroSection />
+            <AboutSection />
             <FaqSection />
             <ScheduleSection />
             <SponsorSection />

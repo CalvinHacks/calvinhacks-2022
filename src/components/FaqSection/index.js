@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import { FaqContainer, Wrap, CardContainer, Dropdown, DataContainer } from './FaqElement';
+import { FaqContainer, Wrap, CardContainer, Dropdown, DataContainer, FaqHeader, AboutImageContainer } from './FaqElement';
 import { Data } from './Data'
 import { FiPlus, FiMinus } from 'react-icons/fi'
 import { AiOutlineQuestionCircle } from 'react-icons/ai';
 import { IconContext } from 'react-icons';
-
+// import people from '../../image/people.png'
 
 const FaqSection = () => {
     const [clicked, setClicked] = useState(false);
@@ -18,8 +18,11 @@ const FaqSection = () => {
 
     return (
         <IconContext.Provider value={{ color: '#8C2131'}}>
+             <AboutImageContainer>
+                {/* <img src={computer} alt='computer'></img> */}
+            </AboutImageContainer>
             <FaqContainer id="faq">
-                <h1> Fequently asked Questions</h1>
+                <FaqHeader> Fequently asked Questions</FaqHeader>
                 <CardContainer>
                     {Data.map((item, index) => {
                         return (

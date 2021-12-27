@@ -1,28 +1,42 @@
 import React from 'react'
-import { HeroContainer, HeroH1, HeroP, HeroButtonContainer } from './HeroElement';
+import { HeroContainer, HeroH1, HeroP, HeroButtonContainer, HeroImage } from './HeroElement';
 import { Button } from '../ButtonElement'
+import plugin from '../../image/plugIn.png'
 
 const HeroSection = () => {
     return (
-        <HeroContainer id="about">
+        <HeroContainer>
             <HeroH1>
-                CalvinHacks
+                CalvinHacks 2022 <br>
+                </br>
+                Get Plugged in!
             </HeroH1>
             <HeroP>
-                CalvinHacks is a 24-hour hackathon at Calvin University where creative and bright students come together to develop projects, learn new skills, and bond with like-minded individuals! Students have the opportunity to design software and win prizes, something you just don't get in university-level coursework.
-            </HeroP>
+            CalvinHacks is returning for its 4th event this year. Come and join us!            </HeroP>
             <HeroButtonContainer>
                 <Button to='/signup'
                     primary='true'
+                    big='true'
+                    dark='true'
+                    liner=''
+                    fontLarge=''
                 >
                     Sign Up
                 </Button>
                 <Button to='SponsorUs'
-                    primary='true'
+                    primary=''
+                    liner='true'
+                    big="true"
+                    dark=''
+                    fontLarge=""
+                    color=''
                 >
                     Sponsor Us
                 </Button>
             </HeroButtonContainer>
+            <HeroImage>
+            <img src={plugin} alt='plugin'/>
+            </HeroImage>
         </HeroContainer>
     )
 }

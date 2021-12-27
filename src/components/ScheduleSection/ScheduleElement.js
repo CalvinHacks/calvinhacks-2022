@@ -8,6 +8,8 @@ export const ScheduleContainer = styled.div`
     height:800px;
 `
 
+export const ScheduleImageContainer = styled.div`
+`
 export const ScheduleTableContainer = styled.div`
     width: 90%;
     display:flex;

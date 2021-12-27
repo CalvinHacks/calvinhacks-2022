@@ -1,24 +1,29 @@
 import styled from "styled-components";
-import { Link } from 'react-scroll'
+
 import { Link as LinkR } from 'react-router-dom'
 
 export const Button = styled(LinkR)`
-    border-radius: 10px;
-    background: ${({primary}) => (primary ? '#8C2131' : '#F3CD00')};
+    border-radius: 15px;
+    width: 100px;
+    background: ${({primary}) => (primary ? '#8C2131' : '#fff')};
     white-space: nowrap;
-    padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
-    color: #FFFFFF;
-    font-size: ${({fontLarge}) => (fontLarge ? '20px' : '16px')}
+    margin-right:30px;
+    border: ${({liner}) => (liner ? '2px solid #8C2131' : 'none' )};
+    padding: ${({big}) => (big ? '14px 30px' : '12px 30px')};
+    color: ${({dark}) => (dark ? '#fff' : '#8C2131')};
+    font-size: ${({fontLarge}) => (fontLarge ? '20px' : '16px')};
     outline: none;
-    border: none;
     cursor: pointer;
     display: flex;
+    text-transform: uppercase;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
     transition: all 0.2s ease-in-out;
 
     &:hover {
         transition all 0.2s ease-in-out;
-        background: ${({primary}) => (primary ? '#F3CD00' : '#F3CD00')};
+        background: ${({primary}) => (primary ? '#F3CD00' : '#8C2131')};
+        color: ${({dark})=> (dark ? '#fff' : '#fff')}
     }
 `

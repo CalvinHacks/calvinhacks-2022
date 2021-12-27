@@ -54,6 +54,7 @@ export const NavLogo = styled(LinkR)`
     display: flex;
     align-items: center;
     margin-left:10px;
+    text-decoration: none;
 
     img {
         width: 80px;
@@ -62,6 +63,8 @@ export const NavLogo = styled(LinkR)`
 
     p {
         text-transform: uppercase;
+        font-weight: 600;
+
     }
 
     &.link {
@@ -99,6 +102,10 @@ export const NavLinks = styled(LinkS)`
 
     &.active {
         border-bottom: 5px solid #8C2131;
+    }
+
+    &.hover {
+        background: #F3CD00;
     }
 `;
 

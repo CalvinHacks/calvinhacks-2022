@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
+export const AboutImageContainer = styled.div`
+
+`
+
+
 export const FaqContainer = styled.div`
-    background: #cccccc;
+    background: linear-gradient(135deg, hsla(351, 58%, 43%, 1) 0%, hsla(351, 55%, 41%, 1) 50%, hsla(351, 62%, 34%, 1) 100%);
     display:flex;
     flex-direction: column;
     justify-content:center;
@@ -11,23 +16,36 @@ export const FaqContainer = styled.div`
     margin-bottom: 30px;
     
 `
+export const FaqHeader = styled.h1`
+    color: white;
+    font-family: 'Open Sans', sans-serif, font-weigh: 700;
+    text-transform: uppercase;
+`
 
 export const CardContainer = styled.div `
-    width: 90%;
-    padding: 30 auto 30 auto;
-    display:grid;
-    border-radius:20px;
-    grid-template-rows: repeat(5, 10%);
-    grid-template-columns: repeat(2, 30%);
+    width: 80%;
+    display:inline-flex;
+    flex-direction: column;
+    // display:grid;
+    // grid-template-rows: repeat(5, 10%);
+    // grid-template-columns: repeat(2, 30%);
     grid-gap: 10px;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items:center;
     
+
+    @media screen and (max-width: 125 0px) {
+        display:inline-flex;
+        flex-direction: column;
+        grid-template-columns: repeat(1, 50%);
+        grid-template-rows: repeat(10, 10%);
+    }
 `
 
 export const DataContainer = styled.div`
     padding-bottom: 20px;
-    
+    border-radius: 30px;
+    width: 500px;
 `
 
 
@@ -44,10 +62,9 @@ export const Wrap = styled.div `
     width:100%;
     text-align: center;
     cursor: pointer;
-    // box-shadow: 2px 10px 35px 1px rgba(153, 153, 153, 0.3);
 
     h1 {
-        padding: 1rem;
+        padding-left: 40px;
         font-size: 1rem;
         text-transform: uppercase;
         text-align: left;
@@ -60,7 +77,6 @@ export const Wrap = styled.div `
 
     span {
         padding-right: 10px;
-        padding-left: 10px;
         text-align: right;
     }
 
@@ -69,7 +85,7 @@ export const Wrap = styled.div `
 
 export const Dropdown = styled.div `
     background: #fff;
-    border-left: 2px solid #8C2131;
+    border-left: 2px solid #fff;
 
     p {
         padding: 2rem;
