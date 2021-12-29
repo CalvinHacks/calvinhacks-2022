@@ -7,7 +7,7 @@ import Sidebar from '../components/Sidebar'
 import FooterSection from '../components/Footer';
 import SponsorSection from '../components/SponsorSection';
 import AboutSection from '../components/AboutSection';
-
+import SignupPage from './signup';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);

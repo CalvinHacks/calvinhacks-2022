@@ -21,7 +21,8 @@ const HeroSection = () => {
                     liner=''
                     fontLarge=''
                 >
-                    Sign Up
+                    Sign Up <br>
+                    </br>for participant
                 </Button>
                 <Button to='SponsorUs'
                     primary=''
@@ -31,7 +32,8 @@ const HeroSection = () => {
                     fontLarge=""
                     color=''
                 >
-                    Sponsor Us
+                    Sponsor Package <br>
+                    </br>
                 </Button>
             </HeroButtonContainer>
             <HeroImage>

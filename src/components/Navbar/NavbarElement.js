@@ -25,7 +25,7 @@ export const NavbarContainer = styled.div `
     justify-content: space-between;
     height: 80px;
     z-index: 1;
-    width 100%;
+    width: 100%;
     padding: 0 24px;
     max-width: 1100px;
 
@@ -76,7 +76,7 @@ export const NavMenu = styled.ul`
     display:flex;
     align-items: center;
     list-style: none;
-    text-align; center;
+    text-align: center;
     margin-right: -10px;
 
     @media screen and (max-width: 760px) {
@@ -87,6 +87,27 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li `
     height: 80px;
 `;
+
+export const NavItemResume = styled(LinkR)`
+    color: black;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .1rem;
+
+    &.active {
+        border-bottom: 5px solid #8C2131;
+    }
+
+    &.hover {
+        background: #F3CD00;
+    }
+`
 
 export const NavLinks = styled(LinkS)`
     color: black;

@@ -2,101 +2,294 @@ import { setDoc, doc, addDoc } from '@firebase/firestore';
 import React, { useState } from 'react';
 import { db } from "./firebase";
 import { collection, getDocs } from "firebase/firestore";
+import picture from "../image/computer.png"
+import { MdOutlineArrowBackIos } from "react-icons/md"
+import { Link as LinkR } from 'react-router-dom'
 
+import styled from "styled-components";
+
+const BackButton = styled(LinkR)`
+    display:inline-block;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin: 30px 0 0 30px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    svg {
+        display: flex;
+        margin: 5px auto 0 auto;
+    }
+
+    &:hover {
+        border: 5px solid #F3CD00;
+
+    }
+`
+
+// const IconContainer = styled.div`
+//     display:flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin: auto auto;
+
+//     svg {
+//         display:flex;
+//         justify-content: center;
+//         align-items: center;
+//         margin: auto auto;
+//     }
+// `
+
+const LeftContainer = styled.div`
+    background: #8C2131;
+    height: 100vh;
+    width: 80%;
+    /* img {
+        width: 450px;
+        height: 400px;
+    } */
+`
+
+const RightContainer = styled.div`
+    width: 100%;
+    height: 100%;
+`
+
+const InfoContainer = styled.div`
+    display:flex;
+    width: 300px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+`
+
+const SignUpContainer = styled.div`
+    display: flex;
+    width: 100wh;
+    height: 100vh;
+
+    
+    label {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 200px;
+        height: 20px;
+        margin-bottom: 20px;
+        /* border-top-style: none;
+        border-right-style: none;
+        border-left-style: none;
+        border-bottom-style: groove; */
+    }
+
+    h1 {
+        margin:0 0 30px;
+    }
+`
+const FirstNameContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+const LastNameContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+const EmailContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+const MajorContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+const AllergyContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+const ShirtSizeContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+const ButtonContainer = styled.div`
+    margin: auto auto;
+    justify-content: center; 
+    align-items: center;
+
+    button {
+        margin: auto auto;
+        justify-content: center; 
+        align-items: center;
+        width: 200px;
+        height: 50px;
+        background: #8C2131;
+        border-style: none;
+        border-radius: 15px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 15px;
+        text-transform: uppercase;
+
+        &:hover {
+        transition: all 0.2s ease-in-out;
+        background: #F3CD00;
+        }
+
+    }
+`
 
 const SignupPage = () => {    
     
     const [state, setState] = useState ({
         firstName: "",
-        lastName: "James",
+        lastName: "",
         email: "", 
         major: "",
         allergy: "",
-        shirtSize: "",
-        resume: ""
+        shirtSize: ""
     })
 
-    let {firstName, lastName, email, major, allergy, shirtSize, resume } = state; 
+    const {firstName, lastName, email, major, allergy, shirtSize } = state; 
 
     const createUser = async () => {
-        await addDoc(collection(db, "users"), {lastName: "testing..."})
+        await addDoc(collection(db, "users"), 
+        {  
+            firstName: firstName, 
+            lastName: lastName,
+            email: email,
+            major: major,
+            allergy: allergy,
+            shirtSize: shirtSize,
+        })
     }
 
     async function submit(e) {
         // console.log(this.state);
         e.preventDefault();
-
         createUser();
-
-        // db.collection("users")
-        //     .doc("testValue")
-        //     .set(state)
-        //     .catch((error) => {
-        //     // noError = false;
-        //     alert("This e-mail address has already been used!"); // Catches duplicate e-mail address
-        //     })
-        //     // Give an alert when successfully registered
-        //     .finally(() => {
-        //         console.log("testing...");
-        //         // if (noError) {
-        //         //     alert("Thank you for signing up for CalvinHacks 2022!")
-        //         // }
-        //     });
+        alert("Thank you for signing up for CalvinHacks 2021!")
+        setState({
+            firstName: "",
+            lastName: "",
+            email: "", 
+            major: "",
+            allergy: "",
+            shirtSize: ""
+        })
     }
+
     const handleInput = (e) => {
-        let {name , value} = e.target.value;
+        let {name , value} = e.target;
         setState({...state, [name]: value})
     }
-    // const [firstName, SetFirst] = useState("")
-    // const [lastName, SetLast] = useState("")
-    // const [email, SetEmail] = useState("")
-    // const [major, SetMajor] = useState("")
-    // const [allergy, SetAllergy] = useState("")
-    // const [shirtSize, SetShirt] = useState("")
-    // const [resume, SetResume] = useState("")
 
-    // const handleInput = () => {
-    //     first = this.target.value(e)
-    // }
     return (
-        <div>
-            <form className="form"
-                onSubmit={submit}
-            >
+        <SignUpContainer>
+            <LeftContainer>
+                <BackButton to="/">
+                    {/* <IconContainer> */}
+                        <MdOutlineArrowBackIos size = '40' color='#FFF' />
+                    {/* </IconContainer> */}
+                </BackButton>
+                {/* <img src={picture} alt="picture"/> */}
+            </LeftContainer>
+            <RightContainer>
+                <InfoContainer>
 
-                <label>Name</label>
-                <input
-                    type="text"
-                    onChange={handleInput}
-                />
+                    <form className="form"
+                        onSubmit={submit}
+                    >
+                        <h1>
+                           Welcome to CalvinHacks!
+                        </h1>
+                        <FirstNameContainer>
+                            <label>First name</label>
+                            <input
+                                type="text"
+                                name="firstName"
+                                placeholder="first name"
+                                onChange={handleInput}
+                                defaultValue={firstName}
+                            />
+                        </FirstNameContainer>
 
-                <label>Email </label>
-                <input
-                    onChange={handleInput}
-                />
+                        <LastNameContainer>
+                            <label>Last name</label>
+                            <input
+                                type="text"
+                                name="lastName"
+                                placeholder='last name'
+                                onChange={handleInput}
+                                defaultValue={lastName}
+                            />
+                        </LastNameContainer>
+                        
+                        <EmailContainer>
+                            <label>Email </label>
+                            <input
+                                type="text"
+                                name="email"
+                                placeholder='email address'
+                                onChange={handleInput}
+                                defaultValue={email}
+                            />
+                        </EmailContainer>
 
-                <label>Major </label>
-                <input
-                    onChange={handleInput}
-                />
+                        <MajorContainer>
+                            <label>Major </label>
+                            <input
+                                type="text"
+                                name="major"
+                                placeholder='Your major'
+                                onChange={handleInput}
+                                defaultValue={major}
+                            />
+                        </MajorContainer>
 
-                <label>Allergy </label>
-                <input 
-                    onChange={handleInput}
-                />
+                        <AllergyContainer>
+                            <label>Allergy </label>
+                            <input 
+                                type="text"
+                                name="allergy"
+                                placeholder='Any allergies you have'
+                                onChange={handleInput}
+                                defaultValue={allergy}
+                            />
+                        </AllergyContainer>
+                        
+                        <ShirtSizeContainer>
+                            <label>ShirtSize </label>
+                            <input 
+                                type="text"
+                                name="shirtSize"
+                                placeholder='Your shirtSize (S, M, L, XL, XXL)'
+                                onChange={handleInput}
+                                defaultValue={shirtSize}
+                            />
+                        </ShirtSizeContainer>
 
-                <label>ShirtSize </label>
-                <input 
-                    onChange={handleInput}
-                />
-
-                <button
-                type="submit"
-                >
-                    Submit
-                </button>
-            </form>
-        </div>
+                        <ButtonContainer>
+                        <button
+                        type="submit"
+                        >
+                            Submit
+                        </button>
+                        </ButtonContainer>
+                    </form>
+                </InfoContainer>
+            </RightContainer>
+        </SignUpContainer>
     )
 }
 

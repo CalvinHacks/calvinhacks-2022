@@ -18,7 +18,7 @@ export const FaqContainer = styled.div`
 `
 export const FaqHeader = styled.h1`
     color: white;
-    font-family: 'Open Sans', sans-serif, font-weigh: 700;
+    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
 `
 
@@ -34,7 +34,7 @@ export const CardContainer = styled.div `
     align-items:center;
     
 
-    @media screen and (max-width: 125 0px) {
+    @media screen and (max-width: 125px) {
         display:inline-flex;
         flex-direction: column;
         grid-template-columns: repeat(1, 50%);

@@ -22,7 +22,7 @@ export const Button = styled(LinkR)`
     transition: all 0.2s ease-in-out;
 
     &:hover {
-        transition all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         background: ${({primary}) => (primary ? '#F3CD00' : '#8C2131')};
         color: ${({dark})=> (dark ? '#fff' : '#fff')}
     }

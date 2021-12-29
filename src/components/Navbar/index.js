@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { FaBars } from 'react-icons/fa';
-import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavButton, NavButtonLink} from './NavbarElement'
+import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavButton, NavButtonLink,NavItemResume} from './NavbarElement'
 import { animateScroll as scroll } from 'react-scroll'
 import logo from '../../image/logo.png'
 
@@ -71,9 +71,9 @@ const Navbar = ({ toggle }) => {
                             offset={-80}     
                         >Sponsor</NavLinks>
                     </NavItem>
-                    <NavItem>
-                        <NavLinks to='Resume'>Resume</NavLinks>
-                    </NavItem>
+                    <NavItemResume to='/Resume'>
+                        Resume
+                    </NavItemResume>
                     <NavButton>
                         <NavButtonLink to='/signin'>
                             Log in
