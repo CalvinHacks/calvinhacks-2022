@@ -117,10 +117,10 @@ const SigninPage = () => {
     const logout = async () => {
         await signOut(auth)
     }
-
+    
+    // to get the User, callback function on currentUser, and setUser
     onAuthStateChanged(auth, (currentUser) => {
         setUser(currentUser)
-
     })
 
     return (

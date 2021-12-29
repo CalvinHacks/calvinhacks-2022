@@ -1,19 +1,27 @@
 import React from 'react';
 import './App.css';
+
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
+
 import Home from './pages';
 import SigninPage from './pages/signin';
 import SignUpPage from './pages/signup';
 import resume from './pages/resume'
-import { Component, useState } from 'react/cjs/react.development';
 
+import { useState } from 'react/cjs/react.development';
+import { FirebaseError } from 'firebase/app';
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from"./pages/firebase";
+
+
+//https://blog.netcetera.com/how-to-create-guarded-routes-for-your-react-app-d2fe7c7b6122
 const GuardedRoute = ({component: Component, auth, ...rest}) => {
 console.log("auth:" + auth)
   return (
     <Route {...rest} render={(props) => (
       auth === true
         ? <Component {...props} />
-        : <Redirect to= '/' />
+        : <Redirect to= '/signin' />
     )} />
   )
 }
@@ -22,10 +30,13 @@ function App() {
 
   const [isAutheticated, setisAutheticated] = useState(false);
 
-  // onAuthStateChanged = (is) => {
-  //   setUser(user);
-  //   if (initializing) setisAutheticated(true);
-  // }
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      setisAutheticated(true)
+    } else {
+      setisAutheticated(false)
+    }
+})
 
   return (
     <Router>
