@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link as LinkR} from 'react-router-dom';
 import { MdOutlineArrowBackIos } from "react-icons/md";
+import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 
 const ResumeContainer = styled.div`
 

@@ -1,10 +1,11 @@
-import { setDoc, doc, addDoc } from '@firebase/firestore';
+import { addDoc } from '@firebase/firestore';
 import React, { useState } from 'react';
-import { db } from "./firebase";
+import { db, storage } from "./firebase";
 import { collection, getDocs } from "firebase/firestore";
 import picture from "../image/computer.png"
 import { MdOutlineArrowBackIos } from "react-icons/md"
 import { Link as LinkR } from 'react-router-dom'
+import { connectStorageEmulator, getDownloadURL, getStorage, ref, uploadBytes, uploadBytesResumable } from 'firebase/storage';
 
 import styled from "styled-components";
 
@@ -28,28 +29,10 @@ const BackButton = styled(LinkR)`
     }
 `
 
-// const IconContainer = styled.div`
-//     display:flex;
-//     justify-content: center;
-//     align-items: center;
-//     margin: auto auto;
-
-//     svg {
-//         display:flex;
-//         justify-content: center;
-//         align-items: center;
-//         margin: auto auto;
-//     }
-// `
-
 const LeftContainer = styled.div`
     background: #8C2131;
     height: 100vh;
     width: 80%;
-    /* img {
-        width: 450px;
-        height: 400px;
-    } */
 `
 
 const RightContainer = styled.div`
@@ -59,6 +42,7 @@ const RightContainer = styled.div`
 
 const InfoContainer = styled.div`
     display:flex;
+    flex-direction: column;
     width: 300px;
     height: 100%;
     justify-content: center;
@@ -81,11 +65,6 @@ const SignUpContainer = styled.div`
     input {
         width: 200px;
         height: 20px;
-        margin-bottom: 20px;
-        /* border-top-style: none;
-        border-right-style: none;
-        border-left-style: none;
-        border-bottom-style: groove; */
     }
 
     h1 {
@@ -122,13 +101,24 @@ const ShirtSizeContainer = styled.div`
     flex-direction: column;
 `
 
+const ResumeContainer = styled.div`
+    p {
+        font-weight: 300;
+        font-size: 15px;
+    }
+
+    input {
+        margin-bottom: 20px;
+    }
+`
+
 const ButtonContainer = styled.div`
     margin: auto auto;
     justify-content: center; 
     align-items: center;
 
     button {
-        margin: auto auto;
+        margin: 30px auto auto auto;
         justify-content: center; 
         align-items: center;
         width: 200px;
@@ -150,6 +140,9 @@ const ButtonContainer = styled.div`
 `
 
 const SignupPage = () => {    
+
+    const [progress, setProgress] = useState(0);
+    const [resume, setResume] = useState({});
     
     const [state, setState] = useState ({
         firstName: "",
@@ -157,7 +150,7 @@ const SignupPage = () => {
         email: "", 
         major: "",
         allergy: "",
-        shirtSize: ""
+        shirtSize: "",
     })
 
     const {firstName, lastName, email, major, allergy, shirtSize } = state; 
@@ -174,6 +167,7 @@ const SignupPage = () => {
         })
     }
 
+
     async function submit(e) {
         // console.log(this.state);
         e.preventDefault();
@@ -185,7 +179,8 @@ const SignupPage = () => {
             email: "", 
             major: "",
             allergy: "",
-            shirtSize: ""
+            shirtSize: "",
+            resume: ""
         })
     }
 
@@ -194,7 +189,34 @@ const SignupPage = () => {
         setState({...state, [name]: value})
     }
 
-    return (
+    const resumeHandler = (e) => {
+        e.preventDefault();
+        const file = e.target.files[0]
+        setResume(file);
+        // const file = e.target.files[0];
+        // resumeUpload(file)
+    }
+
+    const resumeUpload = () => {
+        console.log(resume)
+        const storageRef = ref(storage, `/files/${resume.name}`);
+        const uploadTask = uploadBytesResumable(storageRef, resume);
+
+        uploadTask.on("state_changed", (snapshot) => {
+            const prog = Math.round(
+                (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+            );
+            setProgress(prog);
+        },
+        (err) => console.log(err),
+        () => {
+            getDownloadURL(uploadTask.snapshot.ref)
+            .then(url => console.log(url))
+        }
+        )
+    };
+
+    return ( 
         <SignUpContainer>
             <LeftContainer>
                 <BackButton to="/">
@@ -280,13 +302,31 @@ const SignupPage = () => {
                         </ShirtSizeContainer>
 
                         <ButtonContainer>
-                        <button
-                        type="submit"
-                        >
-                            Submit
-                        </button>
+                            <button
+                            type="submit"
+                            >
+                                Submit
+                            </button>
                         </ButtonContainer>
                     </form>
+                    <ResumeContainer>
+                        <p><b>Optional:</b> Upload a resume for sponsors to view!</p>
+                        <p>Ensure your resume has a unique identifier.</p>
+                        <p>(e.g. firstName_lastName_resume.pdf)</p>
+                        <input 
+                                type="file"
+                                name='resume'
+                                onChange={resumeHandler}
+                            />
+                        <button
+                            onClick={resumeUpload}
+                            >
+                            Submit Resume
+                        </button>
+                        <p>
+                            Uploaded: {progress} %
+                        </p>
+                    </ResumeContainer>
                 </InfoContainer>
             </RightContainer>
         </SignUpContainer>

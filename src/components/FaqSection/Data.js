@@ -16,18 +16,18 @@ export const Data = [
           "While helpful, no previous programming/engineering experience is required. Mentors will be available to help you with your project, so don't worry. You're guaranteed to learn, regardless of your previous experience!",
 
       },
-      {
-        question: "Is the hackathon all virtual?",
-        answer:
-          "The entirety of the hackathon will be hosted online, so you can attend from anywhere in the world!",
+      // {
+      //   question: "Is the hackathon all virtual?",
+      //   answer:
+      //     "The entirety of the hackathon will be hosted online, so you can attend from anywhere in the world!",
 
-      },
-      {
-        question: "Can I go in person?",
-        answer:
-          "If you are a Calvin student, we are making space for you to hack! Calvin students can come for an in-person hack from 6 PM to 4 AM. Due to university policies this year, we are sorry to say that we are unable to host non-Calvin students in person. We are excited to see students in person and virtually!",
+      // },
+      // {
+      //   question: "Can I go in person?",
+      //   answer:
+      //     "If you are a Calvin student, we are making space for you to hack! Calvin students can come for an in-person hack from 6 PM to 4 AM. Due to university policies this year, we are sorry to say that we are unable to host non-Calvin students in person. We are excited to see students in person and virtually!",
 
-      },
+      // },
       {
         question: "What should I bring?",
         answer:
