@@ -12,7 +12,6 @@ export const FaqContainer = styled.div`
     justify-content:center;
     align-items: center;
     height:100%;
-    margin-top: 30px;
     margin-bottom: 30px;
     
 `
@@ -23,23 +22,16 @@ export const FaqHeader = styled.h1`
 `
 
 export const CardContainer = styled.div `
-    width: 80%;
+    width: 90%;
     display:inline-flex;
     flex-direction: column;
-    // display:grid;
-    // grid-template-rows: repeat(5, 10%);
-    // grid-template-columns: repeat(2, 30%);
+    /* display:grid;
+    grid-template-rows: repeat(5, 10%);
+    grid-template-columns: repeat(2, 30%); */
     grid-gap: 10px;
-    justify-content: space-evenly;
     align-items:center;
+    justify-content: stretch;
     
-
-    @media screen and (max-width: 125px) {
-        display:inline-flex;
-        flex-direction: column;
-        grid-template-columns: repeat(1, 50%);
-        grid-template-rows: repeat(10, 10%);
-    }
 `
 
 export const DataContainer = styled.div`

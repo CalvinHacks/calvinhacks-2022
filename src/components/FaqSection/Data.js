@@ -2,7 +2,7 @@ export const Data = [
     {
         question: "What is a hackathon?",
         answer:
-          "CalvinHacks 2021 is a 24-hour event where you can build your ideas, network, show off, and have fun. From 6PM Friday to 6PM Saturday, you have the opportunity to form a team, choose an idea, build it out, and showcase it for a chance to win prizes!",
+          "CalvinHacks 2022 is a 24-hour event where you can build your ideas, network, show off, and have fun. From 6PM Friday to 6PM Saturday, you have the opportunity to form a team, choose an idea, build it out, and showcase it for a chance to win prizes!",
       },
       {
         question: "Who can participate?",

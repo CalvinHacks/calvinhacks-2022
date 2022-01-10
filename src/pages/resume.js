@@ -1,11 +1,46 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link as LinkR} from 'react-router-dom';
-import { MdOutlineArrowBackIos } from "react-icons/md";
-import { getStorage, ref, getDownloadURL } from 'firebase/storage';
+import { MdOutlineArrowBackIos, MdSettingsInputAntenna } from "react-icons/md";
+import { getStorage, ref, getDownloadURL, listAll } from 'firebase/storage';
+
+import { useState } from 'react';
+import { db, storage } from "./firebase";
 
 const ResumeContainer = styled.div`
+`
 
+const InfoContainer = styled.div`
+    display:flex;
+    flex-direction: column;
+    margin: auto auto;
+    width: 800px;
+
+    button {
+        border-radius: 15px;
+        width: 200px;
+        background: #8C2131;
+        white-space: nowrap;
+        margin-right:30px;
+        border: none;
+        padding: 14px 30px;
+        color: #fff;
+        font-size: 20px;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        text-transform: uppercase;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            transition: all 0.2s ease-in-out;
+            background: #F3CD00;
+            color: #fff}
+        }
+    }
 `
 
 const BackButton = styled(LinkR)`
@@ -27,17 +62,85 @@ const BackButton = styled(LinkR)`
 
     }
 `
-const resume = () => {
+    const ResumeList = styled.div`
+        a {
+            text-decoration: none;
+        }
+    `
+
+    const Data = styled.p`
+        color: black;
+        text-decoration: none;
+
+
+        &:visited , &:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        &:hover {
+            color: #8C2131;
+        }
+    `
+
+const Resume = () => {
+    // Create Reference for folder that contain all files
+    const storageRef = ref(storage, `/files`);
+    const [data, setData] = useState([]);
+    const [called, setCalled] = useState("true")
+
+    const listItem = () => {
+        // List all the files in "./files" folder
+        listAll(storageRef)
+            .then((res) => {
+            res.items.forEach((item) => {
+                // Get download url for each file
+                getDownloadURL(ref(storage, `${item.fullPath}`))
+                    .then((url) => {
+                        setData(arr => [...arr, {name: item.name, url: url}]);
+                    })
+                })
+            })
+            .catch(err => {
+                alert(err.message);
+            })
+    }
+    
     return (
         <ResumeContainer>
             <BackButton to="/">
                 <MdOutlineArrowBackIos size = '40' color='#8C2131' />
             </BackButton>
-            <h1>
-                this is where all the resume will be displayed
-            </h1>
+            <InfoContainer>
+                <h1>
+                    Click the button to get all the resumes
+                </h1>
+                <ResumeList>
+                {
+                        data.map((val) => (
+                            <>
+                                <hr></hr>
+                                <a href={val.url} target="_blank">
+                                    <Data>{val.name}</Data>
+                                </a>
+                            
+                            </>
+                        ))
+                }
+                <hr></hr>
+                </ResumeList>
+                
+                <button
+                    onClick={listItem}
+                    >
+                    Get Resume
+                </button>
+            </InfoContainer>
         </ResumeContainer>
     )
 }
 
-export default resume
+
+
+export default Resume
+

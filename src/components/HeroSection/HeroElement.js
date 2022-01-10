@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 
 export const HeroContainer = styled.div`
     background: white;
@@ -6,10 +6,87 @@ export const HeroContainer = styled.div`
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    height:1000px;
+    width: 100vw;
+    height: 80vh;
     position: relative;
     z-index: 1;
-    padding: 50px 10% 0 10%;
+`
+
+export const slideinLeft = keyframes`
+    0% {
+        left :-50%;
+    } 100%  {
+        left: 7.5%;
+    }
+`
+export const slideinRight = keyframes`
+    0% {
+        right :-50%;
+    } 100%  {
+        right: 7.5%;
+    }
+`
+export const HeroImageLeft = styled.div`
+        /* position: absolute;
+        right:50%; */
+        
+        img {
+            position:relative;
+            animation-name: ${slideinLeft};
+            animation-fill-mode: forwards;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+`
+
+export const HeroImageRight = styled.div`
+        /* position: absolute;
+        left:50%;
+        top:21%; */
+       
+        img {
+            position:relative;
+            padding-top:12px;
+            animation-name: ${slideinRight};
+            animation-fill-mode: forwards;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            z-index: -10;
+        }
+`
+
+export const blink = keyframes`
+    0% {
+        opacity :0.0;
+    } 
+    75% {
+        opacity: 0.0;
+    }
+    80% {
+        opacity: 1.0;
+    } 
+    85% {
+        opacity: 0.1; 
+    }
+    95%{
+        opacity: 0.5;
+    }
+    100% {
+        opacity :1;
+    }
+`
+
+export const SignupInfo = styled.div`
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: ${blink};
+
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
 `
 
 export const HeroH1 = styled.h1 `
@@ -18,13 +95,18 @@ export const HeroH1 = styled.h1 `
     text-transform: uppercase;
     letter-spacing: 10px;
     font-size: 50px;
-    font-family: 'Open Sans', sans-serif, font-weigh: 700;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 0;
 `
 
 export const HeroP = styled.p `
     color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     font-size: 20px;
-    font-family: 'Open Sans', sans-serif, font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 1.5;
 `
 
 export const HeroButtonContainer = styled.div`
@@ -33,6 +115,11 @@ export const HeroButtonContainer = styled.div`
     justify-content: space-evenly;
 `
 
-export const HeroImage = styled.div`
+export const HeroImageContainer = styled.div`
+    display: flex;
+    width:100vw;
+    justify-content: center;
 
 `
+
+

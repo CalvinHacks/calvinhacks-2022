@@ -8,12 +8,13 @@ export const Nav = styled.nav`
     height: 80px;
     margin-top: -80px;
     display: flex;
+    width: 100vw;
     justify-content: center;
     align-items: center;
     position: sticky;
     top:0;
     z-index: 10;
-
+    padding: 0;
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
     }
@@ -104,8 +105,9 @@ export const NavItemResume = styled(LinkR)`
         border-bottom: 5px solid #8C2131;
     }
 
-    &.hover {
-        background: #F3CD00;
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        color: #F3CD00;
     }
 `
 
@@ -125,8 +127,9 @@ export const NavLinks = styled(LinkS)`
         border-bottom: 5px solid #8C2131;
     }
 
-    &.hover {
-        background: #F3CD00;
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        color: #8C2131;
     }
 `;
 
