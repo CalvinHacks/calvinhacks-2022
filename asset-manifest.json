@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ea1455b2.chunk.css",
+    "main.js": "/static/js/main.76ddb7a3.chunk.js",
+    "main.js.map": "/static/js/main.76ddb7a3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.df48d453.js",
+    "runtime-main.js.map": "/static/js/runtime-main.df48d453.js.map",
+    "static/js/2.ae12a77f.chunk.js": "/static/js/2.ae12a77f.chunk.js",
+    "static/js/2.ae12a77f.chunk.js.map": "/static/js/2.ae12a77f.chunk.js.map",
+    "static/js/3.0fbfa7d8.chunk.js": "/static/js/3.0fbfa7d8.chunk.js",
+    "static/js/3.0fbfa7d8.chunk.js.map": "/static/js/3.0fbfa7d8.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.ea1455b2.chunk.css.map": "/static/css/main.ea1455b2.chunk.css.map",
+    "static/js/2.ae12a77f.chunk.js.LICENSE.txt": "/static/js/2.ae12a77f.chunk.js.LICENSE.txt",
+    "static/media/comingsoon.cc8ce54d.png": "/static/media/comingsoon.cc8ce54d.png",
+    "static/media/computer.25ddc0ae.png": "/static/media/computer.25ddc0ae.png",
+    "static/media/parallax_back.5f3c0c6d.png": "/static/media/parallax_back.5f3c0c6d.png",
+    "static/media/parallax_background.306d297f.png": "/static/media/parallax_background.306d297f.png",
+    "static/media/parallax_front.332bd001.png": "/static/media/parallax_front.332bd001.png",
+    "static/media/parallax_mid.c9440545.png": "/static/media/parallax_mid.c9440545.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.df48d453.js",
+    "static/js/2.ae12a77f.chunk.js",
+    "static/css/main.ea1455b2.chunk.css",
+    "static/js/main.76ddb7a3.chunk.js"
+  ]
+}
