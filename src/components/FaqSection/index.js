@@ -22,13 +22,12 @@ const FaqSection = () => {
                 {/* <img src={computer} alt='computer'></img> */}
             </AboutImageContainer>
             <FaqContainer id="faq">
-                <FaqHeader> Fequently asked Questions</FaqHeader>
+                <FaqHeader> Frequently Asked Questions</FaqHeader>
                 <CardContainer>
                     {Data.map((item, index) => {
                         return (
-                            <>
-                                <DataContainer>
-                                    <Wrap onClick={() => toggle(index)} key={index}>
+                                <DataContainer key={index}>
+                                    <Wrap onClick={() => toggle(index)}>
                                         <p><AiOutlineQuestionCircle  size = '30'/></p>
                                         <h1>{item.question}</h1>
                                         <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
@@ -39,7 +38,6 @@ const FaqSection = () => {
                                         </Dropdown>
                                     ) : null}
                                 </DataContainer>
-                            </>
                         )
                     }
                 )}

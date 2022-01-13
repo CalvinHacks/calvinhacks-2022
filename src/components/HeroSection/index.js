@@ -35,7 +35,7 @@ const HeroSection = () => {
                         big='true'
                         dark='true'
                         liner=''
-                        fontLarge=''
+                        // fontLarge=''
                     >
                         Sign Up <br>
                         </br>as participant
@@ -45,7 +45,7 @@ const HeroSection = () => {
                         liner='true'
                         big="true"
                         dark=''
-                        fontLarge=""
+                        // fontLarge=""
                         color=''
                     >
                         Sponsor Package <br>
