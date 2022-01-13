@@ -1,5 +1,5 @@
 import React from 'react' 
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 import styled from 'styled-components';
 import {onAuthStateChanged, signInWithEmailAndPassword, signOut, getAuth} from "firebase/auth";
 import {auth} from './firebase';
