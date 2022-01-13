@@ -8,7 +8,8 @@ import SigninPage from './pages/signin';
 import SignUpPage from './pages/signup';
 import resume from './pages/resume'
 
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
+
 import { FirebaseError } from 'firebase/app';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from"./pages/firebase";
@@ -36,7 +37,7 @@ function App() {
     } else {
       setisAutheticated(false)
     }
-})
+});
 
   return (
     <Router>
