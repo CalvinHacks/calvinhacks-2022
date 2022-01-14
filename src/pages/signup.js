@@ -242,7 +242,7 @@ const SignupPage = () => {
                                 name="firstName"
                                 placeholder="first name"
                                 onChange={handleInput}
-                                defaultValue={firstName}
+                                value={firstName}
                             />
                         </FirstNameContainer>
 
@@ -253,7 +253,7 @@ const SignupPage = () => {
                                 name="lastName"
                                 placeholder='last name'
                                 onChange={handleInput}
-                                defaultValue={lastName}
+                                value={lastName}
                             />
                         </LastNameContainer>
                         
@@ -264,18 +264,18 @@ const SignupPage = () => {
                                 name="email"
                                 placeholder='email address'
                                 onChange={handleInput}
-                                defaultValue={email}
+                                value={email}
                             />
                         </EmailContainer>
 
                         <MajorContainer>
-                            <label>Major </label>
+                            <label>Major(s)</label>
                             <input
                                 type="text"
                                 name="major"
-                                placeholder='Your major'
+                                placeholder='Your major(s)'
                                 onChange={handleInput}
-                                defaultValue={major}
+                                value={major}
                             />
                         </MajorContainer>
 
@@ -286,18 +286,18 @@ const SignupPage = () => {
                                 name="allergy"
                                 placeholder='Any allergies you have'
                                 onChange={handleInput}
-                                defaultValue={allergy}
+                                value={allergy}
                             />
                         </AllergyContainer>
                         
                         <ShirtSizeContainer>
-                            <label>ShirtSize </label>
+                            <label>Shirt Size (Adult Sizes Only)</label>
                             <input 
                                 type="text"
                                 name="shirtSize"
-                                placeholder='Your shirtSize (S, M, L, XL, XXL)'
+                                placeholder='Your shirt size (S, M, L, XL, XXL)'
                                 onChange={handleInput}
-                                defaultValue={shirtSize}
+                                value={shirtSize}
                             />
                         </ShirtSizeContainer>
 
