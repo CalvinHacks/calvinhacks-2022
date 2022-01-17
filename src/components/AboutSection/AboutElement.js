@@ -94,7 +94,15 @@ export const DetailSection = styled.div`
         width: 300px;
         height: 300px;
         object-fit: none;
+        margin: auto auto;
     }
+        @media screen and (max-width: 1000px) {
+        display:flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
 `
 export const TextWithImageSection = styled.div`
     display:inline-flex;

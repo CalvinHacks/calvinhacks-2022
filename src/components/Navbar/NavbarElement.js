@@ -71,6 +71,12 @@ export const NavLogo = styled(LinkR)`
     &.link {
         text-decoration: none;
     }
+
+    @media screen and (max-width: 1000px) {
+        p {
+            display: none;
+        }
+    }
 `;
 
 export const NavMenu = styled.ul`
@@ -136,6 +142,7 @@ export const NavLinks = styled(LinkS)`
 export const NavButton = styled.nav `
     display:flex;
     align-items: center;
+    margin-right: 30px;
 
     @media screen and (max-width: 760px) {
         display:none;

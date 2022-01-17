@@ -13,7 +13,7 @@ export const HeroContainer = styled.div`
 
     @media only screen and (max-width: 1000px) {
         overflow: hidden;
-        height: 100vh
+        height: 80vh;
     }
 `
 
@@ -121,6 +121,7 @@ export const HeroP = styled.p `
 
     @media only screen and (max-width: 1000px) {
         font-size: 25px;
+        text-transform: uppercase;
         margin: 30px 20px 30px 20px;
     }
 

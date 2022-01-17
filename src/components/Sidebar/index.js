@@ -18,10 +18,13 @@ const Sidebar = ({ isOpen, toggle }) => {
                     <SidebarLink to='Schedule' onClick={toggle}>
                         Schedule
                     </SidebarLink>
+                    <SidebarLink to='Sponsor' onClick={toggle}>
+                        Sponsor
+                    </SidebarLink>
                 </SidebarMenu>
                 <SideButtonContainer>
                     <SidebarRoute to='./signup' onClick={toggle}>
-                        Signup
+                        Sign-Up for <br></br> <b>CalvinHacks</b>
                     </SidebarRoute>
                 </SideButtonContainer>
             </SidebarWrapper>

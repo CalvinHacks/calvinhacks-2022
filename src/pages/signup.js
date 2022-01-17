@@ -27,12 +27,21 @@ const BackButton = styled(LinkR)`
         border: 5px solid #F3CD00;
 
     }
+
+    @media screen and (max-width: 615px) {
+        visibility: visible;
+    }
+    
 `
 
 const LeftContainer = styled.div`
     background: #8C2131;
     height: 100vh;
     width: 80%;
+    
+    @media screen and (max-width: 615px) {
+        width: 35%;
+    }
 `
 
 const RightContainer = styled.div`
@@ -52,7 +61,7 @@ const InfoContainer = styled.div`
 
 const SignUpContainer = styled.div`
     display: flex;
-    width: 100wh;
+    width: 100vw;
     height: 100vh;
 
     
