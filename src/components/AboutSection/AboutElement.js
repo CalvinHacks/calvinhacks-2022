@@ -8,6 +8,10 @@ export const AboutSectionContainer = styled.div`
     color: white;
     width: 100vw;
     height: 130vh;
+
+    @media screen and (max-width: 1000px) {
+        height: 200vh;
+    }
 `
 
 export const Parallax = styled.div`
@@ -71,9 +75,6 @@ export const AboutDescriptionSection = styled.div`
     flex-direction: column;
     align-items: center;
      
-    @media screen and (max-width: 760px) {
-        display:none;
-    }
 `
 
 export const DescriptionP = styled.p`
@@ -99,5 +100,10 @@ export const TextWithImageSection = styled.div`
     display:inline-flex;
     justify-content: space-evenly;
     width:100%;
+
+    @media screen and (max-width: 1000px) {
+        display:flex;
+        flex-direction: column;
+    }
 `
 

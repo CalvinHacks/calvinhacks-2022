@@ -10,6 +10,11 @@ export const HeroContainer = styled.div`
     height: 80vh;
     position: relative;
     z-index: 1;
+
+    @media only screen and (max-width: 1000px) {
+        overflow: hidden;
+        height: 100vh
+    }
 `
 
 export const slideinLeft = keyframes`
@@ -97,6 +102,12 @@ export const HeroH1 = styled.h1 `
     font-size: 50px;
     font-family: 'Open Sans', sans-serif;
     margin: 0 0;
+
+    @media only screen and (max-width: 1000px) {
+        font-size: 40px;
+        font-weight: 1000;
+    }
+
 `
 
 export const HeroP = styled.p `
@@ -107,6 +118,12 @@ export const HeroP = styled.p `
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     line-height: 1.5;
+
+    @media only screen and (max-width: 1000px) {
+        font-size: 25px;
+        margin: 30px 20px 30px 20px;
+    }
+
 `
 
 export const HeroButtonContainer = styled.div`

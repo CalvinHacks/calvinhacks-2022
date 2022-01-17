@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import { FaqContainer, Wrap, CardContainer, Dropdown, DataContainer, FaqHeader, AboutImageContainer } from './FaqElement';
+import { FaqContainer, Wrap, CardContainer, Dropdown, DataContainer, 
+    FaqHeader } from './FaqElement';
 import { Data } from './Data'
 import { FiPlus, FiMinus } from 'react-icons/fi'
 import { AiOutlineQuestionCircle } from 'react-icons/ai';
@@ -18,26 +19,23 @@ const FaqSection = () => {
 
     return (
         <IconContext.Provider value={{ color: '#8C2131'}}>
-             <AboutImageContainer>
-                {/* <img src={computer} alt='computer'></img> */}
-            </AboutImageContainer>
             <FaqContainer id="faq">
                 <FaqHeader> Frequently Asked Questions</FaqHeader>
                 <CardContainer>
                     {Data.map((item, index) => {
                         return (
-                                <DataContainer key={index}>
-                                    <Wrap onClick={() => toggle(index)}>
-                                        <p><AiOutlineQuestionCircle  size = '30'/></p>
-                                        <h1>{item.question}</h1>
-                                        <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
-                                    </Wrap>
-                                    {clicked === index ? (
-                                        <Dropdown>
-                                            <p>{item.answer}</p>
-                                        </Dropdown>
-                                    ) : null}
-                                </DataContainer>
+                            <DataContainer key={index}>
+                                <Wrap onClick={() => toggle(index)}>
+                                    <p><AiOutlineQuestionCircle  size = '30'/></p>
+                                    <h1>{item.question}</h1>
+                                    <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                                </Wrap>
+                                {clicked === index ? (
+                                    <Dropdown>
+                                        <p>{item.answer}</p>
+                                    </Dropdown>
+                                ) : null}
+                            </DataContainer>
                         )
                     }
                 )}

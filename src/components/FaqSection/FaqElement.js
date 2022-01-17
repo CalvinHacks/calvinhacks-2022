@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const AboutImageContainer = styled.div`
-
-`
-
 
 export const FaqContainer = styled.div`
     background: linear-gradient(135deg, hsla(351, 58%, 43%, 1) 0%, hsla(351, 55%, 41%, 1) 50%, hsla(351, 62%, 34%, 1) 100%);
@@ -12,6 +8,7 @@ export const FaqContainer = styled.div`
     justify-content:center;
     align-items: center;
     height:100%;
+    width:100vw;
     margin-bottom: 30px;
     
 `
@@ -19,6 +16,13 @@ export const FaqHeader = styled.h1`
     color: white;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
+    
+    @media screen and (max-width: 1000px) {
+        width: 80%;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+    }
 `
 
 export const CardContainer = styled.div `
@@ -38,10 +42,14 @@ export const DataContainer = styled.div`
     padding-bottom: 20px;
     border-radius: 30px;
     width: 500px;
+
+    @media screen and (max-width: 1000px) {
+        width: 400px;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+    }
 `
-
-
-
 
 
 export const Wrap = styled.div `
@@ -71,7 +79,7 @@ export const Wrap = styled.div `
         padding-right: 10px;
         text-align: right;
     }
-
+    
 
 `
 
