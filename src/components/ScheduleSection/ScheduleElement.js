@@ -9,6 +9,7 @@ export const ScheduleContainer = styled.div`
 `
 
 export const ScheduleImageContainer = styled.div`
+
 `
 export const ScheduleTableContainer = styled.div`
     width: 90%;

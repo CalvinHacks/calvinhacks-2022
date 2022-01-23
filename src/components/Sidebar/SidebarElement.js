@@ -72,15 +72,24 @@ export const SidebarMenu = styled.ul`
 
 export const SideButtonContainer = styled.div `
     display:flex;
+    flex-direction: column;
     justify-content: center;
+    margin: auto auto;
+    text-align: center;
+    align-items: center;
 `
 
 export const SidebarRoute = styled(LinkR)`
+    display: flex;  
     border-radius: 20px;
     background: #F3CD00;
     text-transform:uppercase;
-    white-space: nowrap;
-    padding: 16px 64px;
+    height:90px;
+    width:250px;
+    white-space: normal;
+    margin-top: 30px;
+    text-align: center;
+    align-items: center;
     color: #fff;
     font-size: 20px;
     letter-spacing: 2px;
@@ -95,4 +104,5 @@ export const SidebarRoute = styled(LinkR)`
         background: #fff;
         color: #8C2131;
     }
+
 `

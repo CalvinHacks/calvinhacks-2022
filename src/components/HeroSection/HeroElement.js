@@ -7,13 +7,14 @@ export const HeroContainer = styled.div`
     justify-content:center;
     align-items: center;
     width: 100vw;
-    height: 80vh;
+    height: auto;
     position: relative;
     z-index: 1;
+    margin-top:80px;
 
     @media only screen and (max-width: 1000px) {
         overflow: hidden;
-        height: 80vh;
+        height: auto;
     }
 `
 
@@ -42,6 +43,7 @@ export const HeroImageLeft = styled.div`
             animation-duration: 2s;
             animation-iteration-count: 1;
         }
+
 `
 
 export const HeroImageRight = styled.div`
@@ -137,6 +139,11 @@ export const HeroImageContainer = styled.div`
     display: flex;
     width:100vw;
     justify-content: center;
+    margin-top: 30px;
+
+    @media screen and (max-width: 1000px) {
+            margin-top: 100px;
+        }
 
 `
 

@@ -1,6 +1,9 @@
-import React from 'react'
-import {Parallax, FrontImg, MidImg, BackImg, BackgroundImg, DescriptionP, 
-    AboutSectionContainer, AboutDescriptionSection, TextWithImageSection, DetailSection} from './AboutElement';
+import React, {useEffect, useState } from 'react';
+
+import {Parallax, FrontImg, MidImg, BackImg, 
+    BackgroundImg, DescriptionP,  AboutSectionContainer, 
+    AboutDescriptionSection, ImgFront, ImgMid, ImgBack, TextWithImageSection, 
+    DetailSection, ImgBackground} from './AboutElement';
 
 import dev from '../../image/develope.png'
 import learn from '../../image/learn.png'
@@ -13,33 +16,50 @@ import parallax_mid from '../../image/parallax_mid.png'
 import parallax_front from '../../image/parallax_front.png'
 
 const AboutSection = () => {
+
+        // state to keep track of how many px scrolled
+    const [scroll, setScroll] = useState(window.scrollY);
+    const handleScroll = () => setScroll(window.scrollY);
+
+     // set up listener on window to update scroll state on scroll
+     useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+     }, []);
+
+
     return (
         <AboutSectionContainer  id="about">
+        
             <Parallax>
                 <section>
                     <FrontImg>
-                         <img src={parallax_front} alt='front'/>
+                         <ImgFront src={parallax_front} alt='front'  
+                             heightValue={scroll * .15}/>
                     </FrontImg> 
                     <MidImg>
-                        <img src={parallax_mid} alt='mid'/>
+                        <ImgMid src={parallax_mid} alt='mid'
+                             heightValue={scroll * .3}/>
                     </MidImg>
                     <BackImg>
-                        <img src={parallax_back} alt='back'/>
+                        <ImgBack src={parallax_back} alt='back'
+                            heightValue={scroll * .4}/>
                     </BackImg>
                     <BackgroundImg>
-                        <img src={parallax_background} className='background' />
+                        <ImgBackground src={parallax_background} 
+                        alt='background' heightValue={scroll * .4}/>
                     </BackgroundImg>
                 </section>
             </Parallax> 
 
             <AboutDescriptionSection>
+                {/* <p>Px scrolled: {scroll}</p> */}
                 <DescriptionP>
                      A 24-hour hackathon where students 
                      <br></br>can take a break from school and:
                 </DescriptionP>
                 <TextWithImageSection>
                     <DetailSection>
-                        <img src={meet} alt='circle'></img>
+                        <img src={meet} alt='circle' ></img>
                         <p>
                             Bond with like-minded  
                             <br></br>

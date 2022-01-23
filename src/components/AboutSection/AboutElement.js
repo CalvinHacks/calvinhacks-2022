@@ -1,4 +1,4 @@
-import styled, {keyframes}from 'styled-components'
+import styled from 'styled-components'
 
 export const AboutSectionContainer = styled.div`
     display:inline-flex;
@@ -8,7 +8,7 @@ export const AboutSectionContainer = styled.div`
     color: white;
     width: 100vw;
     height: 130vh;
-
+    
     @media screen and (max-width: 1000px) {
         height: 200vh;
     }
@@ -31,8 +31,8 @@ export const Parallax = styled.div`
 
     section img {
         position:absolute;
-        top:0;
-        left: 0;
+        /* top:0;
+        left: 0; */
         object-fit: cover;
         width: 100%;
         height: 100%;
@@ -40,29 +40,37 @@ export const Parallax = styled.div`
     }
 `
 
-
 export const FrontImg = styled.div`
-    img {
-        z-index: 10;  
-    }
+`
+
+export const ImgFront = styled.img`
+    z-index: 10;
+    top:${props => props.heightValue}px;
 `
 
 export const MidImg = styled.div`
-    img {
-        z-index: 9;  
-    }
+
+`
+
+export const ImgMid = styled.img`
+    z-index: 9;
+    top:${props => props.heightValue}px;
 `
 
 export const BackImg = styled.div`
-    img {
-        z-index: 8;  
-    }
+
+`
+export const ImgBack = styled.img`
+    z-index: 8;
+    top:${props => props.heightValue}px;
 `
 
+
 export const BackgroundImg = styled.div`
-    img {
-        z-index: 7;  
-    }
+`
+export const ImgBackground = styled.img`
+     z-index: 7;  
+     top:${props => props.heightValue}px;
 `
 
 
@@ -74,6 +82,7 @@ export const AboutDescriptionSection = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 100;
      
 `
 

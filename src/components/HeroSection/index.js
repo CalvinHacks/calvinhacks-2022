@@ -25,9 +25,9 @@ const HeroSection = () => {
                     Get Plugged Back in!
                 </HeroH1>
                 <HeroP>
-                    CalvinHacks is returning for its 4th event this year. 
+                    {/* CalvinHacks is returning for its 4th event this year. 
                     <br></br>
-                    Come and get plugged into our community!            
+                    Come and get plugged into our community!             */}
                 </HeroP>
                 <HeroButtonContainer>
                     <Button to='/signup'
