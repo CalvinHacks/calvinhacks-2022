@@ -1,5 +1,5 @@
 import React from 'react'
-import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, SideButtonContainer, SidebarRoute } from './SidebarElement'
+import { SidebarContainer,NavItemResume, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, SideButtonContainer, SidebarRoute } from './SidebarElement'
 
 const Sidebar = ({ isOpen, toggle }) => {
     return (
@@ -21,6 +21,9 @@ const Sidebar = ({ isOpen, toggle }) => {
                     <SidebarLink to='Sponsor' onClick={toggle}>
                         Sponsor
                     </SidebarLink>
+                    <NavItemResume to='/Resume'>
+                        Resume
+                    </NavItemResume>
                 </SidebarMenu>
                 <SideButtonContainer>
                     <SidebarRoute to='./signup' onClick={toggle}>

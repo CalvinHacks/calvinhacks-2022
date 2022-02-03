@@ -1,9 +1,10 @@
 import React from 'react'
 import { HeroContainer,  HeroImageLeft, HeroImageRight, HeroH1, HeroP, HeroButtonContainer,
      HeroImageContainer, SignupInfo} from './HeroElement';
-import { Button } from '../ButtonElement'
+import { Button, ButtonSponsor } from '../ButtonElement'
 import left from '../../image/left.png'
 import right from '../../image/right.png'
+import url from '../../image/sponsor.pdf'
 
 const HeroSection = () => {
 
@@ -40,7 +41,7 @@ const HeroSection = () => {
                         Sign Up <br>
                         </br>as participant
                     </Button>
-                    <Button to='SponsorUs'
+                    <ButtonSponsor
                         primary=''
                         liner='true'
                         big="true"
@@ -48,9 +49,8 @@ const HeroSection = () => {
                         // fontLarge=""
                         color=''
                     >
-                        Sponsor Package <br>
-                        </br>
-                    </Button>
+                        <a href={url}> Sponsor Package </a>
+                    </ButtonSponsor>
                 </HeroButtonContainer>
             </SignupInfo>
         </HeroContainer>

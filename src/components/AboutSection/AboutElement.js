@@ -46,6 +46,11 @@ export const FrontImg = styled.div`
 export const ImgFront = styled.img`
     z-index: 10;
     top:${props => props.heightValue}px;
+
+    @media screen and (max-width: 1000px) {
+        top:${props => props.heightValue - 15}px;
+    }   
+
 `
 
 export const MidImg = styled.div`
@@ -55,6 +60,11 @@ export const MidImg = styled.div`
 export const ImgMid = styled.img`
     z-index: 9;
     top:${props => props.heightValue}px;
+
+    @media screen and (max-width: 1000px) {
+        top:${props => props.heightValue - 25}px;
+    }   
+
 `
 
 export const BackImg = styled.div`
@@ -63,6 +73,11 @@ export const BackImg = styled.div`
 export const ImgBack = styled.img`
     z-index: 8;
     top:${props => props.heightValue}px;
+
+    @media screen and (max-width: 1000px) {
+        top:${props => props.heightValue - 30}px;
+    }   
+
 `
 
 

@@ -5,6 +5,7 @@ import { collection, getDocs } from "firebase/firestore";
 import picture from "../image/computer.png"
 import { MdOutlineArrowBackIos } from "react-icons/md"
 import { Link as LinkR } from 'react-router-dom'
+import Modal from 'react-modal';
 import { connectStorageEmulator, getDownloadURL, getStorage, ref, uploadBytes, uploadBytesResumable } from 'firebase/storage';
 
 import styled from "styled-components";
@@ -152,6 +153,10 @@ const SignupPage = () => {
 
     const [progress, setProgress] = useState(0);
     const [resume, setResume] = useState({});
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     
     const [state, setState] = useState ({
         firstName: "",
@@ -181,7 +186,7 @@ const SignupPage = () => {
         // console.log(this.state);
         e.preventDefault();
         createUser();
-        alert("Thank you for signing up for CalvinHacks 2021!")
+        // alert("Thank you for signing up for CalvinHacks 2021!")
         setState({
             firstName: "",
             lastName: "",
@@ -191,6 +196,7 @@ const SignupPage = () => {
             shirtSize: "",
             resume: ""
         })
+        handleShow();
     }
 
     const handleInput = (e) => {
@@ -227,6 +233,19 @@ const SignupPage = () => {
 
     return ( 
         <SignUpContainer>
+            
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Modal heading</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Footer>
+                <button onClick={handleClose}>
+                    Close
+                </button>
+                </Modal.Footer>
+            </Modal>
+
             <LeftContainer>
                 <BackButton to="/">
                     {/* <IconContainer> */}
@@ -289,7 +308,7 @@ const SignupPage = () => {
                         </MajorContainer>
 
                         <AllergyContainer>
-                            <label>Allergy </label>
+                            <label>Allergy or Dietary Restrictions  </label>
                             <input 
                                 type="text"
                                 name="allergy"
@@ -311,7 +330,7 @@ const SignupPage = () => {
                         </ShirtSizeContainer>
 
                         <ButtonContainer>
-                            <button
+                            <button 
                             type="submit"
                             >
                                 Submit
@@ -339,6 +358,8 @@ const SignupPage = () => {
                 </InfoContainer>
             </RightContainer>
         </SignUpContainer>
+
+        
     )
 }
 

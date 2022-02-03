@@ -93,11 +93,13 @@ export const SidebarRoute = styled(LinkR)`
     color: #fff;
     font-size: 20px;
     letter-spacing: 2px;
+    font-weight: 600;
     outline:none;
     border:none;
     cursor:pointer;
     transition: 0.2s ease-in-out;
     text-decoration: none;
+    justify-content: center;
 
     &:hover {
         transition: all 0.2 ease-in-out;
@@ -105,4 +107,28 @@ export const SidebarRoute = styled(LinkR)`
         color: #8C2131;
     }
 
+`
+
+export const NavItemResume = styled(LinkR)`
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    list-style: none;
+    padding-left: 0;
+    text-transform:uppercase;
+
+
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        color: #F3CD00;
+        transition: 0.2s ease-in-out
+    }
 `
