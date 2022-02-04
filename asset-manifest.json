@@ -1,28 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.da25611b.chunk.css",
-    "main.js": "/static/js/main.59b17860.chunk.js",
-    "main.js.map": "/static/js/main.59b17860.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9ed3ddf3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9ed3ddf3.js.map",
-    "static/js/2.b6c5de41.chunk.js": "/static/js/2.b6c5de41.chunk.js",
-    "static/js/2.b6c5de41.chunk.js.map": "/static/js/2.b6c5de41.chunk.js.map",
-    "static/js/3.ef774c7e.chunk.js": "/static/js/3.ef774c7e.chunk.js",
-    "static/js/3.ef774c7e.chunk.js.map": "/static/js/3.ef774c7e.chunk.js.map",
+    "main.css": "/static/css/main.2175bb78.chunk.css",
+    "main.js": "/static/js/main.ed84704d.chunk.js",
+    "main.js.map": "/static/js/main.ed84704d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3365bde8.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3365bde8.js.map",
+    "static/js/2.aa3a89c5.chunk.js": "/static/js/2.aa3a89c5.chunk.js",
+    "static/js/2.aa3a89c5.chunk.js.map": "/static/js/2.aa3a89c5.chunk.js.map",
+    "static/js/3.e31cd164.chunk.js": "/static/js/3.e31cd164.chunk.js",
+    "static/js/3.e31cd164.chunk.js.map": "/static/js/3.e31cd164.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.da25611b.chunk.css.map": "/static/css/main.da25611b.chunk.css.map",
-    "static/js/2.b6c5de41.chunk.js.LICENSE.txt": "/static/js/2.b6c5de41.chunk.js.LICENSE.txt",
+    "static/css/main.2175bb78.chunk.css.map": "/static/css/main.2175bb78.chunk.css.map",
+    "static/js/2.aa3a89c5.chunk.js.LICENSE.txt": "/static/js/2.aa3a89c5.chunk.js.LICENSE.txt",
     "static/media/comingsoon.cc8ce54d.png": "/static/media/comingsoon.cc8ce54d.png",
     "static/media/computer.25ddc0ae.png": "/static/media/computer.25ddc0ae.png",
     "static/media/parallax_back.5f3c0c6d.png": "/static/media/parallax_back.5f3c0c6d.png",
     "static/media/parallax_background.306d297f.png": "/static/media/parallax_background.306d297f.png",
     "static/media/parallax_front.332bd001.png": "/static/media/parallax_front.332bd001.png",
-    "static/media/parallax_mid.c9440545.png": "/static/media/parallax_mid.c9440545.png"
+    "static/media/parallax_mid.c9440545.png": "/static/media/parallax_mid.c9440545.png",
+    "static/media/sponsor.4ca28bf0.pdf": "/static/media/sponsor.4ca28bf0.pdf"
   },
   "entrypoints": [
-    "static/js/runtime-main.9ed3ddf3.js",
-    "static/js/2.b6c5de41.chunk.js",
-    "static/css/main.da25611b.chunk.css",
-    "static/js/main.59b17860.chunk.js"
+    "static/js/runtime-main.3365bde8.js",
+    "static/js/2.aa3a89c5.chunk.js",
+    "static/css/main.2175bb78.chunk.css",
+    "static/js/main.ed84704d.chunk.js"
   ]
 }
