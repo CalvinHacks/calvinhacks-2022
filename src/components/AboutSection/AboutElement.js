@@ -8,9 +8,10 @@ export const AboutSectionContainer = styled.div`
     color: white;
     width: 100vw;
     height: 130vh;
-    
+    margin-top: 50px;
+
     @media screen and (max-width: 1000px) {
-        height: 200vh;
+        height: auto;
     }
 `
 
@@ -48,7 +49,7 @@ export const ImgFront = styled.img`
     top:${props => props.heightValue}px;
 
     @media screen and (max-width: 1000px) {
-        top:${props => props.heightValue - 15}px;
+        top:${props => props.heightValue * .15}px;
     }   
 
 `
@@ -62,7 +63,7 @@ export const ImgMid = styled.img`
     top:${props => props.heightValue}px;
 
     @media screen and (max-width: 1000px) {
-        top:${props => props.heightValue - 25}px;
+        top:${props => props.heightValue * .15}px;
     }   
 
 `
@@ -75,7 +76,7 @@ export const ImgBack = styled.img`
     top:${props => props.heightValue}px;
 
     @media screen and (max-width: 1000px) {
-        top:${props => props.heightValue - 30}px;
+        top:${props => props.heightValue * .1}px;
     }   
 
 `
@@ -85,7 +86,12 @@ export const BackgroundImg = styled.div`
 `
 export const ImgBackground = styled.img`
      z-index: 7;  
-     top:${props => props.heightValue}px;
+     top:${props => props.heightValue }px;
+
+     @media screen and (max-width: 1000px) {
+        top:${props => props.heightValue * .15}px;
+    }   
+
 `
 
 

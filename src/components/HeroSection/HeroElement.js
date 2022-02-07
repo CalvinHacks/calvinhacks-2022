@@ -110,6 +110,11 @@ export const HeroH1 = styled.h1 `
         font-weight: 1000;
     }
 
+    @media only screen and (max-width: 600px) {
+        width: 80%;
+        font-size: 35px;
+    }
+
 `
 
 export const HeroP = styled.p `

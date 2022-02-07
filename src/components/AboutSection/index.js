@@ -11,9 +11,9 @@ import meet from '../../image/meet.png'
 
 
 import parallax_background from '../../image/parallax_background.png'
-import parallax_back from '../../image/parallax_back.png'
-import parallax_mid from '../../image/parallax_mid.png'
-import parallax_front from '../../image/parallax_front.png'
+import parallax_back from '../../image/parallax_back-01.png'
+import parallax_mid from '../../image/parallax_mid-01.png'
+import parallax_front from '../../image/parallax_front-01.png'
 
 const AboutSection = () => {
 
