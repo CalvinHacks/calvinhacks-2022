@@ -22,7 +22,7 @@ const HeroSection = () => {
 
             <SignupInfo>
                 <HeroH1>
-                    CalvinHacks 2022 <br></br>
+                    CalvinHacks 2022 
                     Get Plugged Back in!
                 </HeroH1>
                 <HeroP>

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 
 export const FaqContainer = styled.div`
+    
     background: linear-gradient(135deg, hsla(351, 58%, 43%, 1) 0%, hsla(351, 55%, 41%, 1) 50%, hsla(351, 62%, 34%, 1) 100%);
     display:flex;
     flex-direction: column;

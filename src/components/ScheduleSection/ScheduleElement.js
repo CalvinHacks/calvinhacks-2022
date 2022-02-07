@@ -6,15 +6,13 @@ export const ScheduleContainer = styled.div`
     justify-content:center;
     align-items: center;
     height:800px;
-`
-
-export const ScheduleImageContainer = styled.div`
-
+    width: 100vw;
 `
 export const ScheduleTableContainer = styled.div`
     width: 90%;
     display:flex;
     justify-content:center;
+    object-fit: contain;
 
     table {
         width: 100%
@@ -25,6 +23,19 @@ export const ScheduleTableContainer = styled.div`
         font-weight: 150;
         padding-bottom: 5px;
     }
+`
+
+
+export const ScheduleImageContainer = styled.div`
+    
+    @media screen and (max-width: 1000px) {
+        img {
+            width: 400p;
+            height: 270px;
+        }
+    }   
+
+
 `
 
 export const ScheduleTh = styled.th`
