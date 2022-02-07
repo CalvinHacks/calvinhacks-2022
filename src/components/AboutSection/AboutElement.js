@@ -100,8 +100,8 @@ export const AboutDescriptionSection = styled.div`
     height: auto;
     width: 100%;
     text-align: center;
-    background: linear-gradient(135deg, rgba(61,75,94,1) 0%, rgba(25,31,39,1) 49%, rgba(9,14,20,1) 100%);
-    /* background: #191F27; */
+    /* background: linear-gradient(135deg, rgba(61,75,94,1) 0%, rgba(25,31,39,1) 49%, rgba(9,14,20,1) 100%); */
+    background: #191F27;
     display: flex;
     flex-direction: column;
     align-items: center;

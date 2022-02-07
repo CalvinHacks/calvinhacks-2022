@@ -28,21 +28,29 @@ export const FaqHeader = styled.h1`
 
 export const CardContainer = styled.div `
     width: 90%;
-    display:inline-flex;
-    flex-direction: column;
-    /* display:grid;
+    /* display:inline-flex;
+    flex-direction: column; */
+    display:grid;
     grid-template-rows: repeat(5, 10%);
-    grid-template-columns: repeat(2, 30%); */
+    grid-template-columns: repeat(2, 50%);
     grid-gap: 10px;
     align-items:center;
     justify-content: stretch;
+
+    @media screen and (max-width: 1000px) {
+        display:inline-flex;
+        flex-direction: column;
+    }
     
 `
 
 export const DataContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
     padding-bottom: 20px;
     border-radius: 30px;
-    width: 500px;
+    width: 450px;
 
     @media screen and (max-width: 1000px) {
         width: 400px;

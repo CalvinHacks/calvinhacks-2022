@@ -2,8 +2,8 @@ import React from 'react'
 import { HeroContainer,  HeroImageLeft, HeroImageRight, HeroH1, HeroP, HeroButtonContainer,
      HeroImageContainer, SignupInfo} from './HeroElement';
 import { Button, ButtonSponsor } from '../ButtonElement'
-import left from '../../image/left.png'
-import right from '../../image/right.png'
+import left from '../../image/left-01-01.png'
+import right from '../../image/right-01-01.png'
 import url from '../../image/sponsor.pdf'
 
 const HeroSection = () => {

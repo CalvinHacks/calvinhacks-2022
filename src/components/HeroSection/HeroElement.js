@@ -22,14 +22,14 @@ export const slideinLeft = keyframes`
     0% {
         left :-50%;
     } 100%  {
-        left: 7.5%;
+        left: 3%;
     }
 `
 export const slideinRight = keyframes`
     0% {
         right :-50%;
     } 100%  {
-        right: 7.5%;
+        right: 8%;
     }
 `
 export const HeroImageLeft = styled.div`
@@ -53,7 +53,6 @@ export const HeroImageRight = styled.div`
        
         img {
             position:relative;
-            padding-top:12px;
             animation-name: ${slideinRight};
             animation-fill-mode: forwards;
             animation-duration: 2s;
