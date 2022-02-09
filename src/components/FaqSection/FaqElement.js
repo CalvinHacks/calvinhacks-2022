@@ -31,7 +31,7 @@ export const CardContainer = styled.div `
     /* display:inline-flex;
     flex-direction: column; */
     display:grid;
-    grid-template-rows: repeat(5, 10%);
+    grid-template-rows: repeat(5, auto);
     grid-template-columns: repeat(2, 50%);
     grid-gap: 10px;
     align-items:center;
