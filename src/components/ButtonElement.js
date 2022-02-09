@@ -36,7 +36,7 @@ export const ButtonSponsor = styled.button`
     margin-right:30px;
     border: ${({liner}) => (liner ? '2px solid #8C2131' : 'none' )};
     padding: ${({big}) => (big ? '14px 30px' : '12px 30px')};
-    color: ${({dark}) => (dark ? '#fff' : '#8C2131')};
+    color: ${({dark}) => (dark ? '#8C2131' : '#fff')};
     font-size: ${({fontLarge}) => (fontLarge ? '20px' : '16px')};
     outline: none;
     cursor: pointer;

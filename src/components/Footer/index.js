@@ -13,7 +13,7 @@ function FooterSection() {
                         <InfoContainer>
                             <p> More Info</p>
                             <p> MLH Code of Conduct</p>
-                            <p> Copyright @ Cavlinhacks 2021</p>
+                            <p> Copyright @ Calvinhacks 2021</p>
                         </InfoContainer>
                         <SocialMediaContainer>
                             <p> Follow us on social Media</p>

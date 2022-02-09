@@ -141,6 +141,7 @@ const SigninPage = () => {
                 <PasswordContainer>
                     <label>Password</label>
                     <input
+                        type="password"
                         placeholder='Password'
                         onChange={(event) => {
                             setloginPassword(event.target.value);

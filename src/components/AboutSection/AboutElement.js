@@ -92,7 +92,6 @@ export const ImgBackground = styled.img`
      @media screen and (max-width: 1000px) {
         top:${props => props.heightValue * .05}px;
     }   
-
 `
 
 

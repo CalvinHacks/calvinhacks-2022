@@ -42,14 +42,18 @@ const HeroSection = () => {
                         </br>as participant
                     </Button>
                     <ButtonSponsor
+                        onClick={(e)=> {
+                            e.preventDefault();
+                            window.location.href="/static/media/sponsor.4ca28bf0.pdf";
+                        }}
                         primary=''
                         liner='true'
                         big="true"
-                        dark=''
+                        dark='true'
                         // fontLarge=""
                         color=''
                     >
-                        <a href={url}> Sponsor Package </a>
+                         Sponsor Package
                     </ButtonSponsor>
                 </HeroButtonContainer>
             </SignupInfo>

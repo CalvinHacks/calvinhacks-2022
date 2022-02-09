@@ -7,7 +7,9 @@ const SponsorSection = () => {
         <SponsorContainer id='Sponsor'>
             <h1>Sponsor</h1>
             <SpnsorImageContainer>
-                <img src={dornerworks} />
+                <a href='https://dornerworks.com/'>
+                    <img src={dornerworks} />
+                </a>
             </SpnsorImageContainer>
         </SponsorContainer>
     )
