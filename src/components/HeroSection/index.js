@@ -22,13 +22,10 @@ const HeroSection = () => {
 
             <SignupInfo>
                 <HeroH1>
-                    CalvinHacks 2022 
-                    Get Plugged Back in!
+                    CalvinHacks 2022
                 </HeroH1>
                 <HeroP>
-                    {/* CalvinHacks is returning for its 4th event this year. 
-                    <br></br>
-                    Come and get plugged into our community!             */}
+                    Take a Break and Get Plugged Back in!
                 </HeroP>
                 <HeroButtonContainer>
                     <Button to='/signup'
@@ -44,7 +41,7 @@ const HeroSection = () => {
                     <ButtonSponsor
                         onClick={(e)=> {
                             e.preventDefault();
-                            window.location.href="/static/media/sponsor.4ca28bf0.pdf";
+                            window.location.href="/static/media/SponsorshipDocument.673dc1e7.pdf";
                         }}
                         primary=''
                         liner='true'
@@ -53,7 +50,8 @@ const HeroSection = () => {
                         // fontLarge=""
                         color=''
                     >
-                         Sponsor Package
+                         Sponsor <br>
+                         </br> Package
                     </ButtonSponsor>
                 </HeroButtonContainer>
             </SignupInfo>

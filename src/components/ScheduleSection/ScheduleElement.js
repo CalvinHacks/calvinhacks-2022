@@ -6,7 +6,7 @@ export const ScheduleContainer = styled.div`
     justify-content:center;
     align-items: center;
     height:800px;
-    width: 100vw;
+    width: 100%;
 `
 export const ScheduleTableContainer = styled.div`
     width: 90%;

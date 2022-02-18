@@ -9,7 +9,7 @@ export const FaqContainer = styled.div`
     justify-content:center;
     align-items: center;
     height:100%;
-    width:100vw;
+    width:100%;
     margin-bottom: 30px;
     
 `

@@ -6,7 +6,7 @@ export const AboutSectionContainer = styled.div`
     background: #FFF;
     width:100%;
     color: white;
-    width: 100vw;
+    /* width: 100vw; */
     height: auto;
     margin-top: 50px;
     overflow: hidden;
@@ -47,7 +47,7 @@ export const FrontImg = styled.div`
 
 export const ImgFront = styled.img`
     z-index: 10;
-    top:${props => props.heightValue}px;
+    top:${props => props.heightValue * .1}px;
 
     @media screen and (max-width: 1000px) {
         top:${props => props.heightValue * .1}px;
@@ -61,10 +61,10 @@ export const MidImg = styled.div`
 
 export const ImgMid = styled.img`
     z-index: 9;
-    top:${props => props.heightValue}px;
+    top:${props => props.heightValue * .3}px;
 
     @media screen and (max-width: 1000px) {
-        top:${props => props.heightValue * .1}px;
+        top:${props => props.heightValue * .01}px;
     }   
 
 `
@@ -74,10 +74,10 @@ export const BackImg = styled.div`
 `
 export const ImgBack = styled.img`
     z-index: 8;
-    top:${props => props.heightValue}px;
+    top:${props => props.heightValue * .1}px;
 
     @media screen and (max-width: 1000px) {
-        top:${props => props.heightValue * .05}px;
+        top:${props => props.heightValue * .02}px;
     }   
 
 `
@@ -87,11 +87,11 @@ export const BackgroundImg = styled.div`
 `
 export const ImgBackground = styled.img`
      z-index: 7;  
-     top:${props => props.heightValue }px;
+     /* top:${props => props.heightValue }px;
 
      @media screen and (max-width: 1000px) {
-        top:${props => props.heightValue * .05}px;
-    }   
+        top:${props => props.heightValue * .05}px; 
+    }   */
 `
 
 
@@ -104,39 +104,119 @@ export const AboutDescriptionSection = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 100;
+    margin: 0 0;
+    z-index: 9;
      
 `
 
 export const DescriptionP = styled.p`
-    font-size: 20px;
+    width: 100%;
+    font-size: 30px;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
+    margin-bottom: 0px;
+
+    h1 {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin: 0 0;
+        margin-top: 30px;
+    }
+
+    h4 {
+        font-size: 25px;
+        margin: 0 0;
+        font-weight: 200;
+        color: #fff;
+    }
     
+    img {
+        max-width: 1576px;
+        width: 90%;
+        height: auto;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 80%;
+
+        img {
+            display:none ;
+        }
+
+        h1 {
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin: 0 0;
+        margin-top: 30px;
+    }
+
+        h4 {
+            font-size: 20px;
+            margin: 0 0;
+            font-weight: 200;
+            color: #fff;
+        }
+
+ 
+    }
 `
 
 export const DetailSection = styled.div`
-    p {
-        font-size: 20px;
-    }
+    max-width: 40%;
+    width: 400px;
 
     img {
-        width: 300px;
-        height: 300px;
-        object-fit: none;
-        margin: auto auto;
+        display: none;
     }
         @media screen and (max-width: 1000px) {
+
+        img {
+            display: flex;
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+            margin: auto auto;
+        }
+
+        width: 90%;
         display:flex;
+        margin: auto auto;
         flex-direction: column;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
 
 `
+
+export const DetailSectionText = styled.div`
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    
+    
+
+    p {
+        font-size: 17px;
+        font-weight: 400;
+        margin: 0 0;
+        text-transform: none;
+    }
+    h3 {
+        margin: 0 0;
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+`
+
 export const TextWithImageSection = styled.div`
-    display:inline-flex;
+    display:flex;
     justify-content: space-evenly;
     width:100%;
 
@@ -146,3 +226,13 @@ export const TextWithImageSection = styled.div`
     }
 `
 
+export const DescriptionP1 = styled.div`
+width: 80%;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+`
