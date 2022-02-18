@@ -28,7 +28,7 @@ const BackButton = styled(LinkR)`
 
 const SignInContainer = styled.div`
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 
     label {

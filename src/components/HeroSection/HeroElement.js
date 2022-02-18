@@ -29,7 +29,7 @@ export const slideinRight = keyframes`
     0% {
         left : 300px;
     } 100%  {
-        left: -100px;
+        left: 0px;
     }
 `
 

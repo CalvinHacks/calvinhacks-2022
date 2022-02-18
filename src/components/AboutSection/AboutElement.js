@@ -6,7 +6,6 @@ export const AboutSectionContainer = styled.div`
     background: #FFF;
     width:100%;
     color: white;
-    /* width: 100vw; */
     height: auto;
     margin-top: 50px;
     overflow: hidden;
@@ -17,7 +16,7 @@ export const AboutSectionContainer = styled.div`
 `
 
 export const Parallax = styled.div`
-        width: 100vw;
+        width: 100%;
         height: 80vh;
     
     * {
@@ -61,7 +60,7 @@ export const MidImg = styled.div`
 
 export const ImgMid = styled.img`
     z-index: 9;
-    top:${props => props.heightValue * .3}px;
+    top:${props => props.heightValue * .5}px;
 
     @media screen and (max-width: 1000px) {
         top:${props => props.heightValue * .01}px;
@@ -74,7 +73,7 @@ export const BackImg = styled.div`
 `
 export const ImgBack = styled.img`
     z-index: 8;
-    top:${props => props.heightValue * .1}px;
+    top:${props => props.heightValue * .2}px;
 
     @media screen and (max-width: 1000px) {
         top:${props => props.heightValue * .02}px;
@@ -173,21 +172,22 @@ export const DetailSection = styled.div`
         display: none;
     }
         @media screen and (max-width: 1000px) {
+        max-width: 80%;
+        margin: auto auto;
+        flex-direction: column;
+        text-transform: uppercase;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 90%;
+        display:flex;
 
         img {
             display: flex;
             width: 300px;
-            height: 300px;
+            height: 200px;
             object-fit: contain;
             margin: auto auto;
         }
-
-        width: 90%;
-        display:flex;
-        margin: auto auto;
-        flex-direction: column;
-        text-transform: uppercase;
-        letter-spacing: 1px;
     }
 
 `
@@ -223,6 +223,8 @@ export const TextWithImageSection = styled.div`
     @media screen and (max-width: 1000px) {
         display:flex;
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 `
 

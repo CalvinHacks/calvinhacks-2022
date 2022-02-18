@@ -53,7 +53,7 @@ export const DataContainer = styled.div`
     width: 450px;
 
     @media screen and (max-width: 1000px) {
-        width: 400px;
+        width: 350px;
         justify-content:center;
         align-items: center;
         text-align: center;
