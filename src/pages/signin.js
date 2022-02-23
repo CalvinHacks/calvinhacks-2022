@@ -8,6 +8,7 @@ import { MdOutlineArrowBackIos } from "react-icons/md";
 
 const BackButton = styled(LinkR)`
     display:inline-block;
+    position: absolute;
     border-radius: 50%;
     border: 5px solid #8C2131;
     margin: 30px 0 0 30px;
@@ -24,6 +25,7 @@ const BackButton = styled(LinkR)`
         border: 5px solid #F3CD00;
 
     }
+
 `
 
 const SignInContainer = styled.div`
@@ -38,24 +40,28 @@ const SignInContainer = styled.div`
     }
 
     input {
-        width: 400px;
+        width: 350px;
         height: 30px;
         margin-bottom: 20px;
         /* border-top-style: none;
         border-right-style: none;
         border-left-style: none;
         border-bottom-style: groove; */
-    }
+    } 
     
 `
 
 const ButtonsContainer = styled.div`
     display:flex;
     justify-content: space-between;
+    margin: auto auto;
+    max-width: 350px;
+    width: 350px;
 `
 
 const FormContainer = styled.div`
     display: flex;
+    width: 350px;
     flex-direction: column;
     margin: auto auto;
 
@@ -72,12 +78,13 @@ const PasswordContainer = styled.div`
 `
 
 const ButtonContainer = styled.div`
+    justify-content: space-evenly;
+    display: flex;
 
         button {
-        margin: auto auto;
-        justify-content: center; 
+        margin: 0 0;
         align-items: center;
-        width: 200px;
+        width: 150px;
         height: 50px;
         background: #8C2131;
         border-style: none;
@@ -92,6 +99,12 @@ const ButtonContainer = styled.div`
         background: #F3CD00;
         }
     }
+
+    @media screen and (max-width: 1000px) {
+        button {
+            width: 150px;
+        }
+    }   
 `
 
 const SigninPage = () => {

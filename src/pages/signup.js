@@ -32,6 +32,13 @@ const BackButton = styled(LinkR)`
     @media screen and (max-width: 615px) {
         visibility: visible;
     }
+
+    
+    @media screen and (max-width: 800px) {
+        width: 50px;
+        height: 50px;
+        margin: 20px 20px 0 20px;
+    }   
     
 `
 
@@ -53,14 +60,23 @@ const RightContainer = styled.div`
 const InfoContainer = styled.div`
     display:flex;
     flex-direction: column;
-    width: 300px;
+    width: 100%;
+    max-width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
     margin: auto;
+
+    
+    @media screen and (max-width: 800px) {
+        max-width: 90%;
+        width: 150px;
+        
+    }   
 `
 
 const SignUpContainer = styled.div`
+
     display: flex;
     width: 100%;
     height: 100vh;
@@ -112,6 +128,7 @@ const ShirtSizeContainer = styled.div`
 `
 
 const ResumeContainer = styled.div`
+    /* width: 100%; */
     p {
         font-weight: 300;
         font-size: 15px;

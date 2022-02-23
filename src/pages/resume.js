@@ -15,6 +15,12 @@ const InfoContainer = styled.div`
     flex-direction: column;
     margin: auto auto;
     width: 800px;
+    max-width: 80%;
+     
+    h1 {
+        text-transform: uppercase;
+    }
+
 
     button {
         border-radius: 15px;
@@ -40,7 +46,7 @@ const InfoContainer = styled.div`
             background: #F3CD00;
             color: #fff}
         }
-    }
+    
 `
 
 const BackButton = styled(LinkR)`

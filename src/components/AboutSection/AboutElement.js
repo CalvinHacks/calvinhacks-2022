@@ -173,9 +173,6 @@ export const DetailSection = styled.div`
     }
         @media screen and (max-width: 1000px) {
         max-width: 80%;
-        margin: auto auto;
-        flex-direction: column;
-        text-transform: uppercase;
         margin-top: 30px;
         margin-bottom: 30px;
         width: 90%;
@@ -184,10 +181,17 @@ export const DetailSection = styled.div`
         img {
             display: flex;
             width: 300px;
-            height: 200px;
+            height: 150px;
             object-fit: contain;
             margin: auto auto;
         }
+
+        width: 90%;
+        display:flex;
+        margin: auto auto;
+        flex-direction: column;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
 `
