@@ -95,10 +95,18 @@ export const Wrap = styled.div `
 export const Dropdown = styled.div `
     background: #fff;
     border-left: 2px solid #fff;
+    width: 450px;
 
     p {
         padding: 2rem;
         margin: 0 0;
 
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 348px;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
     }
 `

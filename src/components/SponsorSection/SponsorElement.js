@@ -12,4 +12,9 @@ export const SponsorContainer = styled.div`
 `
 
 export const SpnsorImageContainer = styled.div`
+    filter: grayscale(100%);
+
+    &:hover {
+        filter: grayscale(0%);
+    }
 `

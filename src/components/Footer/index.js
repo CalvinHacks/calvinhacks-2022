@@ -20,7 +20,7 @@ function FooterSection() {
                             <a href="https://www.instagram.com/calvinhacks/" target="_blank" rel="noopener noreferrer">
                                 <BsInstagram />
                             </a>
-                            <a href="https://www.instagram.com/calvinhacks/" target="_blank" rel="noopener noreferrer">
+                            <a href="mailto:hacks@calvin.edu" target="_blank" rel="noopener noreferrer">
                                 <AiOutlineMail />
                             </a>
                         </SocialMediaContainer>

@@ -80,8 +80,7 @@ const AboutSection = () => {
                         <DetailSectionText>
                             <h3>Learn new skills </h3>
                             <p>
-                            like-minded individuals and make new friends 
-                             while enjoying our free snacks and drinks
+                                beyond Computer Science through others and our workshops
                             </p>
                         </DetailSectionText>
                     </DetailSection>

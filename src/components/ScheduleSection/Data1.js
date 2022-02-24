@@ -1,7 +1,7 @@
 export const Data1 = [
     {
         time: "1:30am - 2:00am",
-        event: 'Game/workshop',
+        event: 'Game or Workshop #2',
         location: 'T.B.D.',
         description: 'T.B.D.',
     },
