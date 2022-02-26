@@ -1,7 +1,7 @@
 import { addDoc } from '@firebase/firestore';
 import React, { useState } from 'react';
 import { db, storage } from "./firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, getFirestore, where, query } from "firebase/firestore";
 import picture from "../image/computer.png"
 import { MdOutlineArrowBackIos } from "react-icons/md"
 import { Link as LinkR } from 'react-router-dom'
@@ -170,15 +170,33 @@ const SignupPage = () => {
     const {firstName, lastName, email, major, allergy, shirtSize } = state; 
 
     const createUser = async () => {
-        await addDoc(collection(db, "users"), 
-        {  
-            firstName: firstName, 
-            lastName: lastName,
-            email: email,
-            major: major,
-            allergy: allergy,
-            shirtSize: shirtSize,
-        })
+        const db = getFirestore();
+
+        // query(collectionReference, condition)
+        // Goes through studentpatients collection and find a patient assigned to a specific user
+        const q = query(collection(db, "users"), where("email", "==", email));
+        const querySnapshot = await getDocs(q);
+
+        querySnapshot.forEach(
+            doc => {
+                if (doc.exists) {
+                    alert("E-mail you have entered is already registered.")
+                }
+                else {
+                    alert("Thank you for signing up for CalvinHacks 2021!");
+
+                    addDoc(collection(db, "users"), 
+                    {  
+                        firstName: firstName, 
+                        lastName: lastName,
+                        email: email,
+                        major: major,
+                        allergy: allergy,
+                        shirtSize: shirtSize,
+                    })
+                }
+            }
+        )
     }
 
 
@@ -186,7 +204,7 @@ const SignupPage = () => {
         // console.log(this.state);
         e.preventDefault();
         createUser();
-        // alert("Thank you for signing up for CalvinHacks 2021!")
+
         setState({
             firstName: "",
             lastName: "",
@@ -271,6 +289,7 @@ const SignupPage = () => {
                                 placeholder="first name"
                                 onChange={handleInput}
                                 value={firstName}
+                                required
                             />
                         </FirstNameContainer>
 
@@ -282,17 +301,19 @@ const SignupPage = () => {
                                 placeholder='last name'
                                 onChange={handleInput}
                                 value={lastName}
+                                required
                             />
                         </LastNameContainer>
                         
                         <EmailContainer>
                             <label>Email </label>
                             <input
-                                type="text"
+                                type="email"
                                 name="email"
                                 placeholder='email address'
                                 onChange={handleInput}
                                 value={email}
+                                required
                             />
                         </EmailContainer>
 
@@ -332,6 +353,7 @@ const SignupPage = () => {
                         <ButtonContainer>
                             <button 
                             type="submit"
+                            onClick={handleShow}
                             >
                                 Submit
                             </button>
