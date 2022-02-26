@@ -32,12 +32,19 @@ const BackButton = styled(LinkR)`
     @media screen and (max-width: 615px) {
         visibility: visible;
     }
+
+    
+    @media screen and (max-width: 800px) {
+        width: 50px;
+        height: 50px;
+        margin: 20px 20px 0 20px;
+    }   
     
 `
 
 const LeftContainer = styled.div`
     background: #8C2131;
-    height: 100vh;
+    height: 100%;
     width: 80%;
     
     @media screen and (max-width: 615px) {
@@ -53,19 +60,26 @@ const RightContainer = styled.div`
 const InfoContainer = styled.div`
     display:flex;
     flex-direction: column;
-    width: 300px;
+    width: 100%;
+    max-width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
     margin: auto;
+
+    
+    @media screen and (max-width: 800px) {
+        max-width: 90%;
+        width: 150px;
+        
+    }   
 `
 
 const SignUpContainer = styled.div`
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 
-    
     label {
         font-size: 15px;
         font-weight: 700;
@@ -78,8 +92,10 @@ const SignUpContainer = styled.div`
     }
 
     h1 {
-        margin:0 0 30px;
+        font-size: 30px;
     }
+
+    
 `
 const FirstNameContainer = styled.div`
     display: flex;
@@ -112,14 +128,22 @@ const ShirtSizeContainer = styled.div`
 `
 
 const ResumeContainer = styled.div`
+    /* width: 100%; */
     p {
-        font-weight: 300;
         font-size: 15px;
     }
 
     input {
         margin-bottom: 20px;
     }
+
+    @media screen and (max-width: 800px) {
+        p {
+        font-size: 13px;
+        margin: 0 0 5px 0;
+    }
+        
+    }   
 `
 
 const ButtonContainer = styled.div`
@@ -146,6 +170,12 @@ const ButtonContainer = styled.div`
         background: #F3CD00;
         }
 
+    }
+
+    @media screen and (max-width: 800px) {
+        button {
+        margin: 10px;
+        }
     }
 `
 
@@ -329,7 +359,7 @@ const SignupPage = () => {
                         </MajorContainer>
 
                         <AllergyContainer>
-                            <label>Allergy or Dietary Restrictions  </label>
+                            <label>Allergy / Dietary Restrictions  </label>
                             <input 
                                 type="text"
                                 name="allergy"
@@ -362,7 +392,7 @@ const SignupPage = () => {
                     <ResumeContainer>
                         <p><b>Optional:</b> Upload a resume for sponsors to view!</p>
                         <p>Ensure your resume has a unique identifier.</p>
-                        <p>(e.g. firstName_lastName_resume.pdf)</p>
+                        <p>(firstName_lastName_resume.pdf)</p>
                         <input 
                                 type="file"
                                 name='resume'

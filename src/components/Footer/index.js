@@ -13,14 +13,14 @@ function FooterSection() {
                         <InfoContainer>
                             <p> More Info</p>
                             <p> MLH Code of Conduct</p>
-                            <p> Copyright @ Calvinhacks 2021</p>
+                            <p> Copyright @ Calvinhacks2022</p>
                         </InfoContainer>
                         <SocialMediaContainer>
                             <p> Follow us on social Media</p>
                             <a href="https://www.instagram.com/calvinhacks/" target="_blank" rel="noopener noreferrer">
                                 <BsInstagram />
                             </a>
-                            <a href="https://www.instagram.com/calvinhacks/" target="_blank" rel="noopener noreferrer">
+                            <a href="mailto:hacks@calvin.edu" target="_blank" rel="noopener noreferrer">
                                 <AiOutlineMail />
                             </a>
                         </SocialMediaContainer>

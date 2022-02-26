@@ -1,14 +1,18 @@
 import React, {useEffect, useState } from 'react';
 
-import {Parallax, FrontImg, MidImg, BackImg, 
-    BackgroundImg, DescriptionP,  AboutSectionContainer, 
+import {Parallax, FrontImg, MidImg, BackImg, DetailSectionText,
+    BackgroundImg, DescriptionP,  AboutSectionContainer, DescriptionP1,
     AboutDescriptionSection, ImgFront, ImgMid, ImgBack, TextWithImageSection, 
     DetailSection, ImgBackground} from './AboutElement';
 
 import dev from '../../image/develope.png'
 import learn from '../../image/learn.png'
 import meet from '../../image/meet.png'
+import testing from '../../image/test.png'
 
+
+import parallax_background1 from '../../image/parallax_background-01.png'
+import parallax_back1 from '../../image/parallax_back-01-01.png'
 
 import parallax_background from '../../image/parallax_background.png'
 import parallax_back from '../../image/parallax_back-01.png'
@@ -41,11 +45,11 @@ const AboutSection = () => {
                              heightValue={scroll * .3}/>
                     </MidImg>
                     <BackImg>
-                        <ImgBack src={parallax_back} alt='back'
+                        <ImgBack src={parallax_back1} alt='back'
                             heightValue={scroll * .4}/>
                     </BackImg>
                     <BackgroundImg>
-                        <ImgBackground src={parallax_background} 
+                        <ImgBackground src={parallax_background1} 
                         alt='background' heightValue={scroll * .4}/>
                     </BackgroundImg>
                 </section>
@@ -54,38 +58,46 @@ const AboutSection = () => {
             <AboutDescriptionSection>
                 {/* <p>Px scrolled: {scroll}</p> */}
                 <DescriptionP>
-                     A 24-hour hackathon where students 
-                     <br></br>can take a break from school and:
+                     <h1>
+                     CalvinHacks 2021 is a 24Hr hackathon at Calvin Univeristy
+                    </h1>
+                     <h4>We believe through CalvinHacks participants will </h4>
+                     <img src={testing} alt='testing'></img>
                 </DescriptionP>
                 <TextWithImageSection>
                     <DetailSection>
                         <img src={meet} alt='circle' ></img>
-                        <p>
-                            Bond with like-minded  
-                            <br></br>
-                            individuals and make new friends
-                        </p>
+                        <DetailSectionText>
+                            <h3>Bond with </h3>
+                            <p>
+                            like-minded individuals and make new friends
+                             while enjoying our free snacks and drinks
+                            </p>
+                        </DetailSectionText>
                     </DetailSection>
                     <DetailSection>
                         <img src={learn} alt='circle'></img>
-                        <p>
-                            Learn new skills beyond
-                            <br></br>
-                             computer science with peers
-                        </p>
+                        <DetailSectionText>
+                            <h3>Learn new skills </h3>
+                            <p>
+                                beyond Computer Science through others and our workshops
+                            </p>
+                        </DetailSectionText>
                     </DetailSection>
                     <DetailSection>
-                        <img src={dev} alt='circle'></img>
-                        <p>
-                            Develop projects
-                            <br></br>
-                             that will come to live
-                        </p>
+                        <img src={dev} alt='dev'></img>
+                            <DetailSectionText>
+                            <h3>Develop projects </h3>
+                            <p>
+                                that will come to live for judges to give 
+                                feedback and improve
+                            </p>
+                        </DetailSectionText>
                     </DetailSection>
                 </TextWithImageSection>
-                <DescriptionP>
+                <DescriptionP1>
                     Also you win prizes! ;)
-                </DescriptionP>
+                </DescriptionP1>
             </AboutDescriptionSection>
             
         </AboutSectionContainer>

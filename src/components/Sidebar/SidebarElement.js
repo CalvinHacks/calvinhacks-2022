@@ -8,7 +8,7 @@ export const SidebarContainer = styled.aside `
     z-index: 999;
     width: 100%;
     height: 100%;
-    background: #8C2131;
+    background:#1A1A1A;
     display:grid;
     align-items: center;
     top: 0;
@@ -55,7 +55,7 @@ export const SidebarLink = styled(LinkS)`
     cursor: pointer;
 
     &:hover {
-        color: #F3CD00;
+        color: #8C2131;
         transition: 0.2s ease-in-out
     }
 `
@@ -103,14 +103,15 @@ export const SidebarRoute = styled(LinkR)`
 
     &:hover {
         transition: all 0.2 ease-in-out;
-        background: #fff;
-        color: #8C2131;
+        background: #8C2131;
+        color: #fff;
     }
 
 `
 
 export const NavItemResume = styled(LinkR)`
     display:flex;
+    height: 80px;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
@@ -128,7 +129,7 @@ export const NavItemResume = styled(LinkR)`
     cursor: pointer;
 
     &:hover {
-        color: #F3CD00;
+        color: #8C2131;
         transition: 0.2s ease-in-out
     }
 `

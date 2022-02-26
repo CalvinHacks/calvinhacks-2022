@@ -9,7 +9,7 @@ export const FaqContainer = styled.div`
     justify-content:center;
     align-items: center;
     height:100%;
-    width:100vw;
+    width:100%;
     margin-bottom: 30px;
     
 `
@@ -53,7 +53,7 @@ export const DataContainer = styled.div`
     width: 450px;
 
     @media screen and (max-width: 1000px) {
-        width: 400px;
+        width: 350px;
         justify-content:center;
         align-items: center;
         text-align: center;
@@ -95,10 +95,18 @@ export const Wrap = styled.div `
 export const Dropdown = styled.div `
     background: #fff;
     border-left: 2px solid #fff;
+    width: 450px;
 
     p {
         padding: 2rem;
         margin: 0 0;
 
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 348px;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
     }
 `
