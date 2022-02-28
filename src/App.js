@@ -10,7 +10,6 @@ import resume from './pages/resume'
 
 import { useState } from 'react';
 
-import { FirebaseError } from 'firebase/app';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from"./pages/firebase";
 

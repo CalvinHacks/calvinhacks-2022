@@ -13,9 +13,6 @@ import testing from '../../image/test.png'
 
 import parallax_background1 from '../../image/parallax_background-01.png'
 import parallax_back1 from '../../image/parallax_back-01-01.png'
-
-import parallax_background from '../../image/parallax_background.png'
-import parallax_back from '../../image/parallax_back-01.png'
 import parallax_mid from '../../image/parallax_mid-01.png'
 import parallax_front from '../../image/parallax_front-01.png'
 

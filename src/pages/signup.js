@@ -2,10 +2,9 @@ import { addDoc } from '@firebase/firestore';
 import React, { useState } from 'react';
 import { db, storage } from "./firebase";
 import { collection, getDocs } from "firebase/firestore";
-import picture from "../image/computer.png"
+import Modal from 'react-bootstrap/Modal'
 import { MdOutlineArrowBackIos } from "react-icons/md"
 import { Link as LinkR } from 'react-router-dom'
-import Modal from 'react-modal';
 import { connectStorageEmulator, getDownloadURL, getStorage, ref, uploadBytes, uploadBytesResumable } from 'firebase/storage';
 
 import styled from "styled-components";
@@ -88,7 +87,8 @@ const SignUpContainer = styled.div`
 
     input {
         width: 200px;
-        height: 20px;
+        height: 30px;
+        margin-bottom: 10px;
     }
 
     h1 {
@@ -134,7 +134,11 @@ const ResumeContainer = styled.div`
     }
 
     input {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin-bottom: 10px;
     }
 
     @media screen and (max-width: 800px) {
@@ -181,13 +185,17 @@ const ButtonContainer = styled.div`
 
 const SignupPage = () => {    
 
+    // states for uploading resume to the website
     const [progress, setProgress] = useState(0);
     const [resume, setResume] = useState({});
 
+    // state for Modal 
     const [show, setShow] = useState(false);
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    
+
+    // state for uploading student information to firebase
     const [state, setState] = useState ({
         firstName: "",
         lastName: "",
@@ -216,7 +224,7 @@ const SignupPage = () => {
         // console.log(this.state);
         e.preventDefault();
         createUser();
-        // alert("Thank you for signing up for CalvinHacks 2021!")
+        alert("Thank you for signing up for CalvinHacks 2021!")
         setState({
             firstName: "",
             lastName: "",
@@ -226,7 +234,7 @@ const SignupPage = () => {
             shirtSize: "",
             resume: ""
         })
-        handleShow();
+        // setShow(true);
     }
 
     const handleInput = (e) => {
@@ -262,134 +270,136 @@ const SignupPage = () => {
     };
 
     return ( 
-        <SignUpContainer>
-            
-            <Modal show={show} onHide={handleClose}>
+        <>
+            {/* <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
                 <Modal.Footer>
-                <button onClick={handleClose}>
-                    Close
-                </button>
+                    <button variant="secondary" onClick={handleClose}>
+                        Close
+                    </button>
+                    <button variant="primary" onClick={handleClose}>
+                        Save Changes
+                    </button>
                 </Modal.Footer>
-            </Modal>
+            </Modal> */}
+    
+            <SignUpContainer>
+                <LeftContainer>
+                    <BackButton to="/">
+                        {/* <IconContainer> */}
+                            <MdOutlineArrowBackIos size = '40' color='#FFF' />
+                        {/* </IconContainer> */}
+                    </BackButton>
+                    {/* <img src={picture} alt="picture"/> */}
+                </LeftContainer>
+                <RightContainer>
+                    <InfoContainer>
 
-            <LeftContainer>
-                <BackButton to="/">
-                    {/* <IconContainer> */}
-                        <MdOutlineArrowBackIos size = '40' color='#FFF' />
-                    {/* </IconContainer> */}
-                </BackButton>
-                {/* <img src={picture} alt="picture"/> */}
-            </LeftContainer>
-            <RightContainer>
-                <InfoContainer>
+                        <form className="form"
+                            onSubmit={submit}
+                        >
+                            <h1>
+                            Welcome to CalvinHacks!
+                            </h1>
+                            <FirstNameContainer>
+                                <label>First name</label>
+                                <input
+                                    type="text"
+                                    name="firstName"
+                                    placeholder="first name"
+                                    onChange={handleInput}
+                                    value={firstName}
+                                />
+                            </FirstNameContainer>
 
-                    <form className="form"
-                        onSubmit={submit}
-                    >
-                        <h1>
-                           Welcome to CalvinHacks!
-                        </h1>
-                        <FirstNameContainer>
-                            <label>First name</label>
-                            <input
-                                type="text"
-                                name="firstName"
-                                placeholder="first name"
-                                onChange={handleInput}
-                                value={firstName}
-                            />
-                        </FirstNameContainer>
+                            <LastNameContainer>
+                                <label>Last name</label>
+                                <input
+                                    type="text"
+                                    name="lastName"
+                                    placeholder='last name'
+                                    onChange={handleInput}
+                                    value={lastName}
+                                />
+                            </LastNameContainer>
+                            
+                            <EmailContainer>
+                                <label>Email </label>
+                                <input
+                                    type="text"
+                                    name="email"
+                                    placeholder='email address'
+                                    onChange={handleInput}
+                                    value={email}
+                                />
+                            </EmailContainer>
 
-                        <LastNameContainer>
-                            <label>Last name</label>
-                            <input
-                                type="text"
-                                name="lastName"
-                                placeholder='last name'
-                                onChange={handleInput}
-                                value={lastName}
-                            />
-                        </LastNameContainer>
-                        
-                        <EmailContainer>
-                            <label>Email </label>
-                            <input
-                                type="text"
-                                name="email"
-                                placeholder='email address'
-                                onChange={handleInput}
-                                value={email}
-                            />
-                        </EmailContainer>
+                            <MajorContainer>
+                                <label>Major(s)</label>
+                                <input
+                                    type="text"
+                                    name="major"
+                                    placeholder='Your major(s)'
+                                    onChange={handleInput}
+                                    value={major}
+                                />
+                            </MajorContainer>
 
-                        <MajorContainer>
-                            <label>Major(s)</label>
-                            <input
-                                type="text"
-                                name="major"
-                                placeholder='Your major(s)'
-                                onChange={handleInput}
-                                value={major}
-                            />
-                        </MajorContainer>
+                            <AllergyContainer>
+                                <label>Allergy / Dietary Restrictions  </label>
+                                <input 
+                                    type="text"
+                                    name="allergy"
+                                    placeholder='Any allergies you have'
+                                    onChange={handleInput}
+                                    value={allergy}
+                                />
+                            </AllergyContainer>
+                            
+                            <ShirtSizeContainer>
+                                <label>Shirt Size (Adult Sizes Only)</label>
+                                <input 
+                                    type="text"
+                                    name="shirtSize"
+                                    placeholder='Your shirt size (S, M, L, XL, XXL)'
+                                    onChange={handleInput}
+                                    value={shirtSize}
+                                />
+                            </ShirtSizeContainer>
 
-                        <AllergyContainer>
-                            <label>Allergy / Dietary Restrictions  </label>
+                            <ButtonContainer>
+                                <button 
+                                type="submit"
+                                >
+                                    Submit
+                                </button>
+                            </ButtonContainer>
+                        </form>
+                        <ResumeContainer>
+                            <p><b>Optional:</b> Upload a resume for sponsors to view!</p>
+                            <p>Ensure your resume has a unique identifier.</p>
+                            <p>(firstName_lastName_resume.pdf)</p>
                             <input 
-                                type="text"
-                                name="allergy"
-                                placeholder='Any allergies you have'
-                                onChange={handleInput}
-                                value={allergy}
-                            />
-                        </AllergyContainer>
-                        
-                        <ShirtSizeContainer>
-                            <label>Shirt Size (Adult Sizes Only)</label>
-                            <input 
-                                type="text"
-                                name="shirtSize"
-                                placeholder='Your shirt size (S, M, L, XL, XXL)'
-                                onChange={handleInput}
-                                value={shirtSize}
-                            />
-                        </ShirtSizeContainer>
-
-                        <ButtonContainer>
-                            <button 
-                            type="submit"
-                            >
-                                Submit
+                                    type="file"
+                                    name='resume'
+                                    onChange={resumeHandler}
+                                />
+                            <button
+                                onClick={resumeUpload}
+                                >
+                                Submit Resume
                             </button>
-                        </ButtonContainer>
-                    </form>
-                    <ResumeContainer>
-                        <p><b>Optional:</b> Upload a resume for sponsors to view!</p>
-                        <p>Ensure your resume has a unique identifier.</p>
-                        <p>(firstName_lastName_resume.pdf)</p>
-                        <input 
-                                type="file"
-                                name='resume'
-                                onChange={resumeHandler}
-                            />
-                        <button
-                            onClick={resumeUpload}
-                            >
-                            Submit Resume
-                        </button>
-                        <p>
-                            Uploaded: {progress} %
-                        </p>
-                    </ResumeContainer>
-                </InfoContainer>
-            </RightContainer>
-        </SignUpContainer>
-
-        
+                            <p>
+                                Uploaded: {progress} %
+                            </p>
+                        </ResumeContainer>
+                    </InfoContainer>
+                </RightContainer>
+            </SignUpContainer>
+        </>
     )
 }
 

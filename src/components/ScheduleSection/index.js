@@ -1,9 +1,8 @@
 import React from 'react'
 import { ScheduleContainer, ScheduleTableContainer,
-    ThRight, Thleft, ScheduleTh, ScheduleTr } from './ScheduleElement';
+    ThRight, Thleft} from './ScheduleElement';
 import { Data } from './Data'
 import {Data1} from './Data1'
-import soon from '../../image/comingsoon.png'
 
 const ScheduleSection = () => {
     return (
