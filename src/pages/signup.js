@@ -224,7 +224,7 @@ const SignupPage = () => {
         // console.log(this.state);
         e.preventDefault();
         createUser();
-        alert("Thank you for signing up for CalvinHacks 2021!")
+        alert("Thank you for signing up for CalvinHacks 2021!, Hope to see you soon!")
         setState({
             firstName: "",
             lastName: "",
@@ -312,6 +312,7 @@ const SignupPage = () => {
                                     placeholder="first name"
                                     onChange={handleInput}
                                     value={firstName}
+                                    required
                                 />
                             </FirstNameContainer>
 
@@ -323,6 +324,7 @@ const SignupPage = () => {
                                     placeholder='last name'
                                     onChange={handleInput}
                                     value={lastName}
+                                    required
                                 />
                             </LastNameContainer>
                             
@@ -334,6 +336,7 @@ const SignupPage = () => {
                                     placeholder='email address'
                                     onChange={handleInput}
                                     value={email}
+                                    required
                                 />
                             </EmailContainer>
 
@@ -345,6 +348,7 @@ const SignupPage = () => {
                                     placeholder='Your major(s)'
                                     onChange={handleInput}
                                     value={major}
+                                    
                                 />
                             </MajorContainer>
 
