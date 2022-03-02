@@ -18,7 +18,7 @@ export const Data = [
         description: 'Hack away',
     },
     {
-        time: "7:00pm - 7:30pm",
+        time: "7:00pm - 8:00pm",
         event: 'Workshop #1',
         location: 'T.B.D.',
         description: 'Beginners workship with Mark Holtvluwer from DornerWorks',
@@ -28,6 +28,18 @@ export const Data = [
         event: 'Dinner',
         location: 'T.B.D.',
         description: 'Costco Pizza',
+    },
+    {
+        time: "9:30pm - 10:30pm",
+        event: 'Workshop #2',
+        location: 'T.B.D.',
+        description: 'T.B.D.',
+    },
+    {
+        time: "11:30pm - 1:30am",
+        event: 'Workshop #3',
+        location: 'T.B.D.',
+        description: 'Game workshop with Andrew Quist',
     },
     {
         time: "12:00pm",

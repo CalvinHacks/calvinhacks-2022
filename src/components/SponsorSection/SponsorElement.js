@@ -11,10 +11,32 @@ export const SponsorContainer = styled.div`
     }
 `
 
-export const SpnsorImageContainer = styled.div`
+export const SponsorImageContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+`
+
+export const SponsorLink = styled.a`
     filter: grayscale(100%);
 
     &:hover {
         filter: grayscale(0%);
+    }
+`
+
+export const SponsorSilver = styled.div`
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+    }
+`
+
+export const SponsorBronze = styled.div`
+    img {
+        width: 200px;
+        height: 100px;
+        object-fit: contain;
     }
 `

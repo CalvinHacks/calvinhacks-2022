@@ -1,8 +1,7 @@
 import { addDoc } from '@firebase/firestore';
 import React, { useState } from 'react';
 import { db, storage } from "./firebase";
-import { collection, getDocs } from "firebase/firestore";
-import Modal from 'react-bootstrap/Modal'
+import { collection, getDocs, getFirestore, where, query } from "firebase/firestore";
 import { MdOutlineArrowBackIos } from "react-icons/md"
 import { Link as LinkR } from 'react-router-dom'
 import { connectStorageEmulator, getDownloadURL, getStorage, ref, uploadBytes, uploadBytesResumable } from 'firebase/storage';
@@ -207,24 +206,41 @@ const SignupPage = () => {
 
     const {firstName, lastName, email, major, allergy, shirtSize } = state; 
 
-    const createUser = async () => {
-        await addDoc(collection(db, "users"), 
-        {  
-            firstName: firstName, 
-            lastName: lastName,
-            email: email,
-            major: major,
-            allergy: allergy,
-            shirtSize: shirtSize,
-        })
-    }
 
+    const createUser = async () => {
+        const db = getFirestore();
+
+        // query(collectionReference, condition)
+        // Goes through studentpatients collection and find a patient assigned to a specific user
+        const q = query(collection(db, "users"), where("email", "==", email));
+        const querySnapshot = await getDocs(q);
+
+        querySnapshot.forEach(
+            doc => {
+                if (doc.exists) {
+                    alert("E-mail you have entered is already registered.")
+                }
+                else {
+                    alert("Thank you for signing up for CalvinHacks 2021!");
+
+                    addDoc(collection(db, "users"), 
+                    {  
+                        firstName: firstName, 
+                        lastName: lastName,
+                        email: email,
+                        major: major,
+                        allergy: allergy,
+                        shirtSize: shirtSize,
+                    })
+                }
+            }
+        )
+    }
 
     async function submit(e) {
         // console.log(this.state);
         e.preventDefault();
         createUser();
-        alert("Thank you for signing up for CalvinHacks 2021!, Hope to see you soon!")
         setState({
             firstName: "",
             lastName: "",

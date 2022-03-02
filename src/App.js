@@ -39,13 +39,14 @@ function App() {
 });
 
   return (
+
     <Router>
-      <Switch>
-        <Route path= "/" component={Home} exact />
-        <Route path= "/signin" component={SigninPage} exact />
-        <Route path= "/signup" component={SignUpPage} exact />
-        <GuardedRoute path= '/resume' component={resume} auth={isAutheticated} />
-      </Switch>
+        <Switch>
+          <Route path= "/" component={Home} exact />
+          <Route path= "/signin" component={SigninPage} exact />
+          <Route path= "/signup" component={SignUpPage} exact />
+          <GuardedRoute path= '/resume' component={resume} auth={isAutheticated} />
+        </Switch>
     </Router>
   );
 }

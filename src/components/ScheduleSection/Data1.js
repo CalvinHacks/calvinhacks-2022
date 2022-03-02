@@ -1,7 +1,7 @@
 export const Data1 = [
     {
         time: "1:30am - 2:00am",
-        event: 'Game or Workshop #2',
+        event: 'Game',
         location: 'T.B.D.',
         description: 'T.B.D.',
     },
@@ -18,8 +18,8 @@ export const Data1 = [
         description: 'Drinks, food, and wake up',
     },
     {
-        time: "10:00am - 10:30am",
-        event: 'Workshop #3',
+        time: "10:00am - 11:00am",
+        event: 'Workshop #4',
         location: 'T.B.D.',
         description: 'T.B.D.',
     },
