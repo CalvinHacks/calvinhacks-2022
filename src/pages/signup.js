@@ -207,26 +207,21 @@ const SignupPage = () => {
         const q = query(collection(db, "users"), where("email", "==", email));
         const querySnapshot = await getDocs(q);
 
-        querySnapshot.forEach(
-            doc => {
-                if (doc.exists) {
-                    alert("E-mail you have entered is already registered.")
-                }
-                else {
-                    alert("Thank you for signing up for CalvinHacks 2021!");
+        if (querySnapshot.empty) {
+            alert("Thank you for signing up for CalvinHacks 2021!");
 
-                    addDoc(collection(db, "users"), 
-                    {  
-                        firstName: firstName, 
-                        lastName: lastName,
-                        email: email,
-                        major: major,
-                        allergy: allergy,
-                        shirtSize: shirtSize,
-                    })
-                }
-            }
-        )
+            addDoc(collection(db, "users"), 
+            {  
+                firstName: firstName, 
+                lastName: lastName,
+                email: email,
+                major: major,
+                allergy: allergy,
+                shirtSize: shirtSize,
+            })
+        } else {
+            alert("E-mail you have entered is already registered.")
+        }
     }
 
 
