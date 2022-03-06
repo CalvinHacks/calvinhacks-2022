@@ -4,6 +4,7 @@ import { HeroContainer,  HeroImageLeft, HeroImageRight, HeroH1, HeroP, HeroButto
 import { Button, ButtonSponsor } from '../ButtonElement'
 import left from '../../image/left-01-01.png'
 import right from '../../image/right-01-01.png'
+import sponsor from '../../image/SponsorshipDocument.pdf'
 
 const HeroSection = () => {
 
@@ -48,7 +49,11 @@ const HeroSection = () => {
                         dark='true'
                         // fontLarge=""
                         color=''
-                    >
+                    >   
+                    {/* <a href={sponsor}>
+                        Sponsor <br>
+                         </br> Package
+                    </a> */}
                          Sponsor <br>
                          </br> Package
                     </ButtonSponsor>

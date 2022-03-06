@@ -23,13 +23,12 @@ export const Nav = styled.nav`
 
 export const NavbarContainer = styled.div `
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     height: 80px;
     z-index: 10;
     width: 100%;
     padding: 0 24px;
     max-width: 1100px;
-
 `;
 
 export const MobileIcon = styled.div `
@@ -39,7 +38,7 @@ export const MobileIcon = styled.div `
         display:block;
         position: absolute;
         top: 0;
-        right: 0;
+        left: 50px;
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
@@ -136,6 +135,9 @@ export const NavLinks = styled(LinkS)`
     &:hover {
         transition: all 0.2s ease-in-out;
         color: #8C2131;
+    }
+
+    @media screen and (max-width: 1000px) {
     }
 `;
 

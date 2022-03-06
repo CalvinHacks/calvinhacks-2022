@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const SponsorContainer = styled.div`
+    width: 100%;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -12,6 +13,7 @@ export const SponsorContainer = styled.div`
 `
 
 export const SponsorImageContainer = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -19,6 +21,7 @@ export const SponsorImageContainer = styled.div`
 
 export const SponsorLink = styled.a`
     filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
 
     &:hover {
         filter: grayscale(0%);
@@ -26,17 +29,34 @@ export const SponsorLink = styled.a`
 `
 
 export const SponsorSilver = styled.div`
+    width: 100%;
     img {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         object-fit: contain;
+    }
+
+    &:hover {
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.05);
     }
 `
 
 export const SponsorBronze = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row ;
+    justify-content:center;
+
     img {
         width: 200px;
-        height: 100px;
+        height: 200px;
         object-fit: contain;
+        margin: 0 10px 0px 10px ;
+    }
+
+    img:hover {
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.05);
     }
 `

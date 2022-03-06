@@ -2,6 +2,7 @@ import React from 'react';
 import { SponsorContainer, SponsorImageContainer, SponsorSilver, SponsorBronze, SponsorLink } from './SponsorElement';
 import dornerworks from '../../image/dornerworks.png'
 import spindance from '../../image/spindance.jpg'
+import atomicobject from '../../image/atomic.png'
 
 const SponsorSection = () => {
     return (
@@ -16,6 +17,9 @@ const SponsorSection = () => {
                 <SponsorBronze>
                     <SponsorLink href='https://spindance.com/'>
                         <img src={spindance} alt='spindance'/>
+                    </SponsorLink>
+                    <SponsorLink href='https://atomicobject.com/'>
+                        <img src={atomicobject} alt='atomicobject'/>
                     </SponsorLink>
                 </SponsorBronze>
             </SponsorImageContainer>
