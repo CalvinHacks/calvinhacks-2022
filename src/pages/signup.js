@@ -44,7 +44,7 @@ const BackButton = styled(LinkR)`
 
 const LeftContainer = styled.div`
     background: #8C2131;
-    height: 100vh;
+    height: auto;
     width: 80%;
     text-align: center;
     display: flex;
