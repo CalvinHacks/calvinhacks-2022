@@ -58,7 +58,7 @@ const LeftContainer = styled.div`
 const ResumeContainer = styled.div`
     display:flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     max-width: 100%;
     height: auto;
     justify-content: center;
@@ -99,7 +99,7 @@ const InfoContainer = styled.div`
     align-items: center;
     margin: auto;
     margin-left: 50px;
-
+    margin-bottom: 50px;
     
     @media screen and (max-width: 800px) {
         max-width: 90%;
@@ -121,7 +121,9 @@ const SignUpContainer = styled.div`
 
     input {
         width: 200px;
-        height: 20px;
+        height: 30px;
+        margin-bottom: 10px;
+
     }
 
     h1 {
@@ -328,9 +330,10 @@ const SignupPage = () => {
                     {/* </IconContainer> */}
                 </BackButton>
                 <ResumeContainer>
-                    <p><b>Optional:</b> Upload a resume for sponsors to view!</p>
-                    <p>Ensure your resume has a unique identifier.</p>
-                    <p>(firstName_lastName_resume.pdf)</p>
+                    <h1><b>Optional:</b></h1>
+                    <p> Upload a resume for sponsors to view! Ensure your resume has a unique identifier. Only Sponsors will be able to view your resumes!</p>
+                    {/* <p>Ensure your resume has a unique identifier.</p> */}
+                    <p>(e.g. firstName_lastName_resume.pdf)</p>
                     <input 
                             type="file"
                             name='resume'
@@ -361,7 +364,7 @@ const SignupPage = () => {
                             <input
                                 type="text"
                                 name="firstName"
-                                placeholder="first name"
+                                placeholder="First name"
                                 onChange={handleInput}
                                 value={firstName}
                                 required
@@ -373,7 +376,7 @@ const SignupPage = () => {
                             <input
                                 type="text"
                                 name="lastName"
-                                placeholder='last name'
+                                placeholder='Last name'
                                 onChange={handleInput}
                                 value={lastName}
                                 required
@@ -397,7 +400,7 @@ const SignupPage = () => {
                             <input
                                 type="email"
                                 name="email"
-                                placeholder='email address'
+                                placeholder='Email Address'
                                 onChange={handleInput}
                                 value={email}
                                 required
@@ -463,7 +466,7 @@ const SignupPage = () => {
                             />
                         </FormContainer>
                         
-                        <FormContainer>
+                        {/* <FormContainer>
                             <label>Shirt Size (Adult Sizes Only)</label>
                             <input 
                                 type="text"
@@ -472,7 +475,7 @@ const SignupPage = () => {
                                 onChange={handleInput}
                                 value={shirtSize}
                             />
-                        </FormContainer>
+                        </FormContainer> */}
 
                                                 
                         <CodeContainer>
