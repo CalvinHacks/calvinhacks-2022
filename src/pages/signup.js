@@ -88,9 +88,6 @@ const RightContainer = styled.div`
     width: 100%;
     height: auto;
 
-    @media screen and (max-width: 615px) {
-        width: 50%;
-    }
 `
 
 const InfoContainer = styled.div`
@@ -201,6 +198,7 @@ const ButtonContainer = styled.div`
     @media screen and (max-width: 800px) {
         button {
         margin: 10px;
+        width: 150px;
         }
     }
 `
@@ -346,7 +344,7 @@ const SignupPage = () => {
                     <h1><b>Optional:</b></h1>
                     <p> Upload a resume for sponsors to view! Ensure your resume has a unique identifier. Only Sponsors will be able to view your resumes!</p>
                     {/* <p>Ensure your resume has a unique identifier.</p> */}
-                    <p>(e.g. firstName_lastName_resume.pdf)</p>
+                    <p>(e.g. fName_lName_resume.pdf)</p>
                     <input 
                             type="file"
                             name='resume'
@@ -469,7 +467,7 @@ const SignupPage = () => {
                         </FormContainer>
 
                         <FormContainer>
-                            <label>Allergy / Dietary Restrictions  </label>
+                            <label>Allergy/Dietary Restrictions  </label>
                             <input 
                                 type="text"
                                 name="allergy"
