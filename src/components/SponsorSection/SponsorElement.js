@@ -59,4 +59,9 @@ export const SponsorBronze = styled.div`
         transition: all 0.3s ease-in-out;
         transform: scale(1.05);
     }
+
+    @media screen and (max-width: 615px) {
+        display: flex;
+        flex-direction: column ;
+    }   
 `

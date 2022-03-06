@@ -51,7 +51,7 @@ const LeftContainer = styled.div`
     flex-direction: column;
     
     @media screen and (max-width: 615px) {
-        width: 35%;
+        width: 50%;
     }
 `
 
@@ -75,7 +75,7 @@ const ResumeContainer = styled.div`
         margin-bottom: 20px;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 615px) {
         p {
         font-size: 13px;
         margin: 0 0 5px 0;
@@ -87,6 +87,10 @@ const ResumeContainer = styled.div`
 const RightContainer = styled.div`
     width: 100%;
     height: auto;
+
+    @media screen and (max-width: 615px) {
+        width: 50%;
+    }
 `
 
 const InfoContainer = styled.div`
@@ -102,9 +106,8 @@ const InfoContainer = styled.div`
     margin-bottom: 50px;
     
     @media screen and (max-width: 800px) {
-        max-width: 90%;
-        width: 150px;
-        
+        width: 200px;
+        margin-left: 20px;
     }   
 `
 
@@ -130,6 +133,15 @@ const SignUpContainer = styled.div`
         font-size: 30px;
     }
 
+    @media screen and (max-width: 615px) {
+
+            input {
+            width: 150px;
+            height: 30px;
+            margin-bottom: 10px;
+
+        }
+    }   
     
 `
 
@@ -141,12 +153,13 @@ const FormContainer = styled.div`
     p {
         font-size: 14px;
     }
+
 `
 
 const CodeContainer = styled.div`
     display: flex;
     flex-direction:column ;
-    width: 70%;
+    width: 80%;
 
     p {
         font-size: 13px;
