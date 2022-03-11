@@ -1,14 +1,20 @@
 import React from 'react';
-import { SponsorContainer, SponsorImageContainer, SponsorSilver, SponsorBronze, SponsorLink } from './SponsorElement';
+import { SponsorContainer, SponsorImageContainer, SponsorSilver, SponsorBronze, SponsorGold, SponsorLink } from './SponsorElement';
 import dornerworks from '../../image/dornerworks.png'
 import spindance from '../../image/spindance.jpg'
 import atomicobject from '../../image/atomic.png'
+import tekton from '../../image/tekton.png'
 
 const SponsorSection = () => {
     return (
         <SponsorContainer id='Sponsor'>
             <h1>Sponsor</h1>
             <SponsorImageContainer>
+                <SponsorGold>
+                <SponsorLink href='https://www.tekton.com/'>
+                        <img src={tekton} alt='tekton'/>
+                    </SponsorLink>
+                </SponsorGold>   
                 <SponsorSilver>
                     <SponsorLink href='https://dornerworks.com/'>
                         <img src={dornerworks} alt='dornerworks'/>

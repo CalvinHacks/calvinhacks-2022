@@ -27,6 +27,19 @@ export const SponsorLink = styled.a`
         filter: grayscale(0%);
     }
 `
+export const SponsorGold = styled.div`
+    width: 100%;
+    img {
+        width: 500px;
+        height: 500x;
+        object-fit: contain;
+    }
+
+    &:hover {
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.05);
+    }
+`
 
 export const SponsorSilver = styled.div`
     width: 100%;
