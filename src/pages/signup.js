@@ -490,8 +490,8 @@ const SignupPage = () => {
 
                                                 
                         <CodeContainer>
-                            <p><b>MLH Code of Conduct:</b> "I have read and agree to the MLH Code of
-                                Conduct."</p>
+                            <p><b>MLH Code of Conduct:</b> "I have read and agree to the <a href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf' target="_blank">MLH Code of
+                                Conduct</a>."</p>
                             <input 
                                 type="checkbox"
                                 name="conduct"
@@ -506,9 +506,9 @@ const SignupPage = () => {
                         <CodeContainer>
                             <p><b>Event Logistics Information: </b> “I authorize you to share my
                                 application/registration information with Major League Hacking for event
-                                administration, ranking, and MLH administration in-line with the MLH
-                                Privacy Policy. I further agree to the terms of both the MLH Contest
-                                Terms and Conditions and the MLH Privacy Policy.”</p>
+                                administration, ranking, and MLH administration in-line with the <a href='https://mlh.io/privacy' target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both the 
+                                <a href='https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions' target="_blank"> MLH Contest 
+                                Terms and Conditions</a> and the <a href='https://mlh.io/privacy' target="_blank">MLH Privacy Policy</a>.”</p>
                             <input 
                                 type="checkbox"
                                 name="logistics"
