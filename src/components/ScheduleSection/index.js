@@ -34,7 +34,7 @@ const ScheduleSection = () => {
                                                     {item.event}
                                                 </h4>
                                                 <p>
-                                                    {/* {item.description} */}
+                                                    {item.description}
                                                 </p>
                                             </ThRight>
                                         </tr>
@@ -72,7 +72,7 @@ const ScheduleSection = () => {
                                                     {item.event}
                                                 </h4>
                                                 <p>
-                                                    {/* {item.description} */}
+                                                    {item.description}
                                                 </p>
                                             </ThRight>
                                         </tr>

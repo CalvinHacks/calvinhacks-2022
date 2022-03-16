@@ -64,6 +64,7 @@ export const Thleft = styled.th`
         letter-spacing: 1px;
         font-size: 15px;
         font-weight: 200;
+        text-transform: none;
     }
 
     @media screen and (max-width: 800px) {
