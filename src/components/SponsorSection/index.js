@@ -7,8 +7,8 @@ import tekton from '../../image/tekton.png'
 
 const SponsorSection = () => {
     return (
-        <SponsorContainer id='Sponsor'>
-            <h1>Sponsor</h1>
+        <SponsorContainer id='Sponsors'>
+            <h1>Sponsors</h1>
             <SponsorImageContainer>
                 <SponsorGold>
                 <SponsorLink href='https://www.tekton.com/'>

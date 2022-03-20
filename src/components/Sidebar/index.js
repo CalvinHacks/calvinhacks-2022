@@ -18,8 +18,8 @@ const Sidebar = ({ isOpen, toggle }) => {
                     <SidebarLink to='Schedule' onClick={toggle}>
                         Schedule
                     </SidebarLink>
-                    <SidebarLink to='Sponsor' onClick={toggle}>
-                        Sponsor
+                    <SidebarLink to='Sponsors' onClick={toggle}>
+                        Sponsors
                     </SidebarLink>
                     <NavItemResume to='/Resume'>
                         Resume

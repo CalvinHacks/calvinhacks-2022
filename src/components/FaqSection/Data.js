@@ -2,7 +2,7 @@ export const Data = [
     {
         question: "What is a hackathon?",
         answer:
-          "CalvinHacks 2022 is a 24-hour event where you can build your ideas, network, show off, and have fun. From 6PM Friday to 6PM Saturday, you have the opportunity to form a team, choose an idea, build it out, and showcase it for a chance to win prizes!",
+          "A hackathon is a 24-hour event where you can build your ideas, network with peers and recruiters, show off your creativity, and have fun! CalvinHacks is a hackathon hosted at Calvin University. From 6PM EST Friday to 8PM Saturday, you have the opportunity to form a team, choose an idea, build it out, and showcase it for a chance to win prizes!",
       },
       {
         question: "Who can participate?",
@@ -13,7 +13,7 @@ export const Data = [
       {
         question: "What if I'm a beginner?",
         answer:
-          "While helpful, no previous programming/engineering experience is required. Mentors will be available to help you with your project, so don't worry. You're guaranteed to learn, regardless of your previous experience!",
+          "While helpful, no previous programming/engineering experience is required. Professional mentors will be available to help you with your project, so don't worry. You're guaranteed to learn, regardless of your previous experience!",
 
       },
       // {
@@ -31,7 +31,7 @@ export const Data = [
       {
         question: "What should I bring?",
         answer:
-          "If you plan to attend in-person, you should definitely bring a mask, hand sanitizer, your student ID, laptop, and charger. If you need additional hardware for your project, we recommend bringing that along as well, as we will not be able to provide hardware this year.",
+          "If you plan to attend in-person, you should definitely bring your student ID (if you are a student), laptop, and charger. If you need additional hardware for your project, we recommend bringing that along as well, as we will not be able to provide hardware this year.",
 
       },
       {
@@ -47,7 +47,7 @@ export const Data = [
       {
         question: "How big can my team be?",
         answer:
-          "Teams consist of 1-4 people. We suggest working with others, but you can work alone if you'd like! This year, we will have team Discord channels set up if you are unable to meet with your team in person.",
+          "Teams consist of 1-4 people. We suggest working with others, but you can work alone if you'd like!",
       },
       {
         question: "What can I make?",
@@ -57,14 +57,24 @@ export const Data = [
       {
         question: "Can I start my project before the event?",
         answer:
-          "No, sorry! However, we encourage you to use third-party APIs, services, and frameworks during the event!",
+          "Projects started before the event will not be considered for prizes. We do, however, allow and encourage the use third-party APIs, services, and frameworks during the event!",
       },
       {
         question: "Is there a Code of Conduct for CalvinHacks?",
-        answer: "Yes, we observe the MLH Code of Conduct.",
+        answer: "Yes, we observe the",
+        linkWord: "MLH Code of Conduct",
+        link: "https://static.mlh.io/docs/mlh-code-of-conduct.pdf",
       },
       {
-        question: "Can I help out?",
+        question: "What is your COVID-19 policy?",
+        answer:
+          "We are currently following Calvin University’s policy on masks being optional in all spaces, regardless of vaccination status. " +
+          "We are closely monitoring any guideline updates and the COVID situation here in Grand Rapids, so if the situation with COVID does change, we will adjust our policy accordingly.",
+        linkWord: "See the guidelines here",
+        link: "https://calvin.edu/covid-response/",
+        },
+      {
+        question: "Can I help out as a volunteer?",
         answer:
           "Yes, we'd love to have you! Please email us at hacks@calvin.edu to get started as an event volunteer.",
       },

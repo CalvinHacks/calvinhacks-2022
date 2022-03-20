@@ -32,7 +32,10 @@ const FaqSection = () => {
                                 </Wrap>
                                 {clicked === index ? (
                                     <Dropdown>
-                                        <p>{item.answer}</p>
+                                      {!item.hasOwnProperty('link') && !item.hasOwnProperty('linkWord') ?
+                                        <p>{item.answer}</p> :
+                                        <p>{item.answer} <a href={item.link} target="_blank" rel="noopener noreferrer">{item.linkWord}</a>.</p>
+                                      }
                                     </Dropdown>
                                 ) : null}
                             </DataContainer>
