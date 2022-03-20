@@ -63,13 +63,13 @@ const Navbar = ({ toggle }) => {
                         >Schedule</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='Sponsor'
+                        <NavLinks to='Sponsors'
                             smooth={true} 
                             duration={500}
                             spy={true} 
                             exact='true' 
                             offset={-80}     
-                        >Sponsor</NavLinks>
+                        >Sponsors</NavLinks>
                     </NavItem>
                     <NavItemResume to='/Resume'>
                         Resume

@@ -20,8 +20,9 @@ export const SocialMediaContainer = styled.div`
     color: white;
 
     a {
-        padding-left:30px;
+      margin-left: 30px
     }
+
     @media screen and (max-width: 1000px) {
         p {
         line-height: 10px;
@@ -45,4 +46,13 @@ export const InfoContainer = styled.div`
         font-size: 14px;
     }
     }  
+`
+
+export const StyledLink = styled.a`
+    a {
+      color: #FFF;
+    }
+    a:hover {
+      color: #F3CD00;
+    }
 `

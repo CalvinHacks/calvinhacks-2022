@@ -8,6 +8,7 @@ const ScheduleSection = () => {
     return (
         <ScheduleContainer id="schedule">
             <ScheduleTableContainer>
+                <h4>Note: All times are in Eastern Standard Time</h4>
                 <h1>Day 1 - Friday, March 25</h1>
                 <hr/>
                 <table>
@@ -33,9 +34,10 @@ const ScheduleSection = () => {
                                                 <h4>
                                                     {item.event}
                                                 </h4>
-                                                <p>
-                                                    {item.description}
-                                                </p>
+                                                {!item.hasOwnProperty('link') && !item.hasOwnProperty('linkWord')?
+                                                  <p>{item.description}</p> :
+                                                  <p>{item.description} <a href={item.link} target="_blank" rel="noopener noreferrer">{item.linkWord}</a></p>
+                                                }
                                             </ThRight>
                                         </tr>
                                     </>
@@ -71,9 +73,10 @@ const ScheduleSection = () => {
                                                 <h4>
                                                     {item.event}
                                                 </h4>
-                                                <p>
-                                                    {item.description}
-                                                </p>
+                                                {!item.hasOwnProperty('link') && !item.hasOwnProperty('linkWord')?
+                                                  <p>{item.description}</p> :
+                                                  <p>{item.description} <a href={item.link} target="_blank" rel="noopener noreferrer">{item.linkWord}</a></p>
+                                                }
                                             </ThRight>
                                         </tr>
                                     </>
