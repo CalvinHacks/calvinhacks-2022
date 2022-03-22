@@ -3,13 +3,7 @@ export const Data1 = [
         time: "12:00am - 1:00am",
         event: 'MLH Game: MS Paint Bob Ross',
         location: 'T.B.D.',
-        description: 'Mike Swift (MLH)',
-    },
-    {
-        time: "4:00am - 4:30am",
-        event: 'Game #1',
-        location: 'T.B.D.',
-        description: 'T.B.D.',
+        description: 'Mike Swift - MLH',
     },
     {
         time: "7:00am",
@@ -21,7 +15,7 @@ export const Data1 = [
         time: "10:00am - 11:00am",
         event: 'Creativity Workshop',
         location: 'T.B.D.',
-        description: 'Professor Vander Linden',
+        description: 'Professor Vander Linden - Calvin University',
     },
     {
         time: "12:15pm",

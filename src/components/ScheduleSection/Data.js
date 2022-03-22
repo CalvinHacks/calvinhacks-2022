@@ -19,9 +19,9 @@ export const Data = [
     },
     {
         time: "7:00pm - 8:00pm",
-        event: 'Workshop',
+        event: 'FPGA\'s: What Are They? And Why Would You Want to Use One?',
         location: 'T.B.D.',
-        description: 'Mark Holtvluwer from DornerWorks',
+        description: 'Mark Holtvluwer - DornerWorks',
     },
     {
         time: "8:30pm",
@@ -33,13 +33,13 @@ export const Data = [
         time: "9:30pm - 10:30pm",
         event: 'Seeing and Hearing Algorithms Run in Real Time',
         location: 'T.B.D.',
-        description: 'Professor Joel Adams',
+        description: 'Professor Joel Adams - Calvin University',
     },
     {
         time: "10:30pm - 11:30am",
         event: 'Game Workshop',
         location: 'T.B.D.',
-        description: 'Andrew Quist',
+        description: 'Andrew Quist - Think Chromatic',
     },
     {
         time: "12:00pm",
