@@ -36,13 +36,13 @@ export const Data = [
         description: 'Professor Joel Adams - Calvin University',
     },
     {
-        time: "10:30pm - 11:30am",
+        time: "10:30pm - 11:30pm",
         event: 'Game Workshop',
         location: 'T.B.D.',
         description: 'Andrew Quist - Think Chromatic',
     },
     {
-        time: "12:00pm",
+        time: "12:00am",
         event: 'Midnight Snack',
         location: 'Commons Annex Basement Lobby',
         description: 'Krispy Kreme Donut',
